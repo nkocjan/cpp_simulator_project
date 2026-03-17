@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <numeric>
 
 LeagueEngine::LeagueEngine() : currentMatchday(0) {}
 
@@ -24,7 +25,6 @@ void LeagueEngine::setPlayerTeam(const std::string& teamName) {
 }
 
 void LeagueEngine::generateSchedule() {
-    // Check if we have even number of teams (required for round-robin)
     if (teams.empty()) {
         std::cerr << "Nie można wygenerować terminarz - brak drużyn w lidze!" << std::endl;
         return;
@@ -36,45 +36,59 @@ void LeagueEngine::generateSchedule() {
     }
 
     schedule.clear();
+    currentMatchday = 0;
 
-    size_t n = teams.size();
+    const size_t n = teams.size();
+    std::vector<size_t> rotation(n);
+    std::iota(rotation.begin(), rotation.end(), 0);
 
-    // Generate home matches for first round
-    for (int round = 0; round < 2; ++round) {
-        for (size_t matchday = 0; matchday < n - 1; ++matchday) {
-            std::vector<std::shared_ptr<Match>> matchdayMatches;
+    std::vector<std::vector<std::pair<size_t, size_t>>> firstRoundPairs;
+    firstRoundPairs.reserve(n - 1);
 
-            for (size_t i = 0; i < n / 2; ++i) {
-                size_t homeIdx = i;
-                size_t awayIdx = n - 1 - i;
+    // Pierwsza runda: każda para gra dokładnie raz.
+    for (size_t round = 0; round < n - 1; ++round) {
+        std::vector<std::pair<size_t, size_t>> pairings;
+        pairings.reserve(n / 2);
 
-                // Rotate teams for next matchday (except last team which is fixed)
-                if (matchday > 0) {
-                    homeIdx = (homeIdx + matchday) % (n - 1);
-                    if (homeIdx == 0) homeIdx = 0;
-                    awayIdx = (awayIdx + matchday) % (n - 1);
-                    if (awayIdx == 0) awayIdx = n - 1;
-                    else awayIdx = (n - 1 - (awayIdx - 1));
-                }
+        for (size_t i = 0; i < n / 2; ++i) {
+            size_t home = rotation[i];
+            size_t away = rotation[n - 1 - i];
 
-                // Swap home/away for second round
-                if (round == 1) {
-                    std::swap(homeIdx, awayIdx);
-                }
-
-                // Ensure valid indices
-                if (homeIdx >= teams.size() || awayIdx >= teams.size() || homeIdx == awayIdx) {
-                    continue;
-                }
-
-                auto match = std::make_shared<Match>(teams[homeIdx], teams[awayIdx]);
-                matchdayMatches.push_back(std::move(match));
+            // Delikatna kompensacja gospodarza, aby ograniczyć serie dom/wyjazd.
+            if (i == 0 && (round % 2 == 1)) {
+                std::swap(home, away);
             }
-
-            if (!matchdayMatches.empty()) {
-                schedule.push_back(std::move(matchdayMatches));
-            }
+            pairings.emplace_back(home, away);
         }
+
+        firstRoundPairs.push_back(pairings);
+
+        // Rotacja wszystkich poza pierwszą drużyną (circle method).
+        const size_t last = rotation.back();
+        for (size_t idx = n - 1; idx > 1; --idx) {
+            rotation[idx] = rotation[idx - 1];
+        }
+        rotation[1] = last;
+    }
+
+    // Zapis pierwszej rundy.
+    for (const auto &matchdayPairs : firstRoundPairs) {
+        std::vector<std::shared_ptr<Match>> matchdayMatches;
+        matchdayMatches.reserve(matchdayPairs.size());
+        for (const auto &p : matchdayPairs) {
+            matchdayMatches.push_back(std::make_shared<Match>(teams[p.first], teams[p.second]));
+        }
+        schedule.push_back(std::move(matchdayMatches));
+    }
+
+    // Rewanże: te same pary, odwrócone role gospodarza/gościa.
+    for (const auto &matchdayPairs : firstRoundPairs) {
+        std::vector<std::shared_ptr<Match>> matchdayMatches;
+        matchdayMatches.reserve(matchdayPairs.size());
+        for (const auto &p : matchdayPairs) {
+            matchdayMatches.push_back(std::make_shared<Match>(teams[p.second], teams[p.first]));
+        }
+        schedule.push_back(std::move(matchdayMatches));
     }
 
     std::cout << "Terminarz wygenerowany: " << schedule.size() << " kolejek" << std::endl;

@@ -13,7 +13,6 @@ Match::Match(std::shared_ptr<Team> home, std::shared_ptr<Team> away)
 void Match::simulate() {
     if (isFinished) return;
 
-    // Random engine setup
     std::uniform_int_distribution<> dis(0, 10);
 
     double homeStrength = homeTeam->calculateTeamStrength();
@@ -21,24 +20,19 @@ void Match::simulate() {
 
     matchEvents.push_back("Mecz pomiędzy " + homeTeam->getName() + " a " + awayTeam->getName() + " rozpoczął się!");
 
-    // Simulate goals based on team strength
     int homeGoalCount = (dis(g_gen) % 4) + (homeStrength > awayStrength ? 1 : 0);
     int awayGoalCount = (dis(g_gen) % 4) + (awayStrength > homeStrength ? 1 : 0);
 
     homeGoals.setValue(homeGoalCount);
     awayGoals.setValue(awayGoalCount);
 
-    // Assign goals to specific players
     assignGoalsToPlayers(homeTeam, homeGoalCount);
     assignGoalsToPlayers(awayTeam, awayGoalCount);
 
-    // Simulate cards
     simulateCards();
 
-    // Simulate injuries
     simulateInjuries();
 
-    // Update team statistics
     homeTeam->addMatch();
     awayTeam->addMatch();
 
@@ -47,11 +41,10 @@ void Match::simulate() {
     awayTeam->addGoalScored(awayGoalCount);
     awayTeam->addGoalConceded(homeGoalCount);
 
-    // Update all players' minutes
     const int MATCH_MINUTES = 90;
     for (auto& player : homeTeam->getPlayers()) {
         player->addMinutesPlayed(MATCH_MINUTES);
-        player->getConditionStat().subtract(15.0); // Condition decreases after match
+        player->getConditionStat().subtract(15.0);
     }
     for (auto& player : awayTeam->getPlayers()) {
         player->addMinutesPlayed(MATCH_MINUTES);
@@ -60,7 +53,6 @@ void Match::simulate() {
 
     matchEvents.push_back("Wynik końcowy: " + std::to_string(homeGoalCount) + ":" + std::to_string(awayGoalCount));
 
-    // Award points and determine winner
     if (homeGoalCount > awayGoalCount) {
         homeTeam->addWin();
         awayTeam->addLoss();
@@ -98,7 +90,6 @@ void Match::assignGoalsToPlayers(const std::shared_ptr<Team>& team, int goalCoun
 void Match::simulateCards() {
     std::uniform_int_distribution<> dis(0, 100);
 
-    // 20% chance for yellow cards
     if (dis(g_gen) < 20 && !homeTeam->getPlayers().empty()) {
         assignCardsToPlayers(homeTeam, 1, true);
     }
@@ -106,7 +97,6 @@ void Match::simulateCards() {
         assignCardsToPlayers(awayTeam, 1, true);
     }
 
-    // 5% chance for red cards
     if (dis(g_gen) < 5 && !homeTeam->getPlayers().empty()) {
         assignCardsToPlayers(homeTeam, 1, false);
     }
@@ -130,7 +120,7 @@ void Match::assignCardsToPlayers(const std::shared_ptr<Team>& team, int cardCoun
         } else {
             player->addRedCard();
             matchEvents.push_back("CZERWONA KARTKA! " + player->getName() + " " + player->getSurname());
-            player->setInjuryDuration(3); // Red card = 3 match ban
+            player->setInjuryDuration(3);
         }
     }
 }
@@ -138,7 +128,6 @@ void Match::assignCardsToPlayers(const std::shared_ptr<Team>& team, int cardCoun
 void Match::simulateInjuries() {
     std::uniform_int_distribution<> dis(0, 1000);
 
-    // 2% chance for injury to any player
     for (auto& player : homeTeam->getPlayers()) {
         if (dis(g_gen) < 20) {
             player->setInjuryDuration(2);

@@ -9,17 +9,26 @@
 #include "gui/MatchScheduleWidget.h"
 #include "gui/TeamDetailsWidget.h"
 
+/**
+ * @file mainwindow.h
+ * @brief Glowne okno aplikacji Qt i orchestrator widokow ligi.
+ */
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
 
+/**
+ * @brief Glowny kontroler warstwy GUI.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /** @brief Tworzy glowne okno aplikacji. */
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -31,11 +40,17 @@ private:
     std::unique_ptr<TeamDetailsWidget> teamDetailsWidget;
     class QTabWidget *leagueTabs;
 
+    /** @brief Konfiguruje panel startowy. */
     void setupStartPanel();
+    /** @brief Tworzy dane ligi na podstawie ustawien startowych. */
     void prepareLeagueData();
+    /** @brief Inicjalizuje widoki zakladek ligowych. */
     void setupLeagueViews();
+    /** @brief Odswieza wszystkie widoki ligi. */
     void refreshLeagueView();
+    /** @brief Symuluje nastepna kolejke i odswieza GUI. */
     void simulateNextMatchday();
+    /** @brief Symuluje cala lige do konca i odswieza GUI. */
     void simulateWholeLeague();
 };
 

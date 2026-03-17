@@ -5,16 +5,30 @@
 #include "Statistic.h"
 #include <string>
 
+/**
+ * @file Striker.h
+ * @brief Deklaracja klasy napastnika.
+ */
+
+/**
+ * @brief Reprezentuje napastnika.
+ */
 class Striker : public Player {
 private:
     Statistic<int> shootingFinishing;
 
 public:
+    /**
+     * @brief Tworzy napastnika.
+     */
     Striker(std::string _name, std::string _surname, double _condition, int _overall, int _shootingFinishing);
 
+    /** @copydoc Player::calculateGoalChance */
     double calculateGoalChance() const override;
 
+    /** @return Wartosc wykanczania akcji. */
     int getShootingFinishing() const;
+    /** @brief Ustawia wykanczanie akcji. */
     void setShootingFinishing(int value);
 };
 
