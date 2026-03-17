@@ -1,0 +1,106 @@
+================================ TABELA LIGOWA ================================
+Kolejka: 6 / 6
+Data: 2026-03-16
+
+Poz │ Drużyna              │  Pkt │ M  │ W  │ R  │ P  │ +  │ -  │ Różnica
+────┼────────────────────┼──────┼────┼────┼────┼────┼────┼────┼────────
+  1 │ Legia Warszawa      │    10│   4│   3│   1│   0│   8│   2│    +6
+  2 │ FC Krakow           │     7│   4│   2│   1│   1│   8│   4│    +4
+  3 │ Warta Poznan        │     7│   8│   2│   1│   5│   9│  19│     -10
+  4 │ Lech Poznan         │     4│   4│   1│   1│   2│   6│   6│    +0
+
+================================ HISTORIA MECZÓW ================================
+
+--- KOLEJKA 1 ---
+Mecz pomiędzy FC Krakow a Warta Poznan rozpoczął się!
+Wynik: 1 - 0
+  • GOOOOOOL! KRA_CM Two strzela!
+  • KONTUZJA! KRA_GK Four pauzuje 2 mecze!
+  • Wynik końcowy: 1:0
+  • Zwycięstwo FC Krakow!
+Mecz pomiędzy Legia Warszawa a Lech Poznan rozpoczął się!
+Wynik: 0 - 0
+  • ŻÓŁTA KARTKA! LPO_CB Three
+  • CZERWONA KARTKA! LPO_ST One
+  • Wynik końcowy: 0:0
+  • Remis!
+
+--- KOLEJKA 2 ---
+Mecz pomiędzy Legia Warszawa a Warta Poznan rozpoczął się!
+Wynik: 3 - 0
+  • GOOOOOOL! LEG_CB Three strzela!
+  • GOOOOOOL! LEG_ST One strzela!
+  • GOOOOOOL! LEG_ST One strzela!
+  • Wynik końcowy: 3:0
+  • Zwycięstwo Legia Warszawa!
+Mecz pomiędzy Lech Poznan a Warta Poznan rozpoczął się!
+Wynik: 1 - 2
+  • GOOOOOOL! LPO_GK Four strzela!
+  • GOOOOOOL! WPO_CM Two strzela!
+  • GOOOOOOL! WPO_GK Four strzela!
+  • Wynik końcowy: 1:2
+  • Zwycięstwo Warta Poznan!
+
+--- KOLEJKA 3 ---
+Mecz pomiędzy FC Krakow a Warta Poznan rozpoczął się!
+Wynik: 4 - 0
+  • GOOOOOOL! KRA_CM Two strzela!
+  • GOOOOOOL! KRA_CM Two strzela!
+  • GOOOOOOL! KRA_CM Two strzela!
+  • GOOOOOOL! KRA_ST One strzela!
+  • ŻÓŁTA KARTKA! KRA_CM Two
+  • KONTUZJA! KRA_CB Three pauzuje 2 mecze!
+  • Wynik końcowy: 4:0
+  • Zwycięstwo FC Krakow!
+
+--- KOLEJKA 4 ---
+Mecz pomiędzy Warta Poznan a FC Krakow rozpoczął się!
+Wynik: 1 - 1
+  • GOOOOOOL! WPO_CM Two strzela!
+  • GOOOOOOL! KRA_GK Four strzela!
+  • ŻÓŁTA KARTKA! WPO_ST One
+  • Wynik końcowy: 1:1
+  • Remis!
+Mecz pomiędzy Lech Poznan a Legia Warszawa rozpoczął się!
+Wynik: 1 - 2
+  • GOOOOOOL! LPO_CB Three strzela!
+  • GOOOOOOL! LEG_ST One strzela!
+  • GOOOOOOL! LEG_CB Three strzela!
+  • Wynik końcowy: 1:2
+  • Zwycięstwo Legia Warszawa!
+
+--- KOLEJKA 5 ---
+Mecz pomiędzy Warta Poznan a Legia Warszawa rozpoczął się!
+Wynik: 1 - 3
+  • GOOOOOOL! WPO_CB Three strzela!
+  • GOOOOOOL! LEG_GK Four strzela!
+  • GOOOOOOL! LEG_GK Four strzela!
+  • GOOOOOOL! LEG_GK Four strzela!
+  • ŻÓŁTA KARTKA! WPO_GK Four
+  • Wynik końcowy: 1:3
+  • Zwycięstwo Legia Warszawa!
+Mecz pomiędzy Warta Poznan a Lech Poznan rozpoczął się!
+Wynik: 2 - 4
+  • GOOOOOOL! WPO_GK Four strzela!
+  • GOOOOOOL! WPO_CB Three strzela!
+  • GOOOOOOL! LPO_GK Four strzela!
+  • GOOOOOOL! LPO_GK Four strzela!
+  • GOOOOOOL! LPO_CB Three strzela!
+  • GOOOOOOL! LPO_GK Four strzela!
+  • Wynik końcowy: 2:4
+  • Zwycięstwo Lech Poznan!
+
+--- KOLEJKA 6 ---
+Mecz pomiędzy Warta Poznan a FC Krakow rozpoczął się!
+Wynik: 3 - 2
+  • GOOOOOOL! WPO_CM Two strzela!
+  • GOOOOOOL! WPO_CB Three strzela!
+  • GOOOOOOL! WPO_CM Two strzela!
+  • GOOOOOOL! KRA_CM Two strzela!
+  • GOOOOOOL! KRA_ST One strzela!
+  • ŻÓŁTA KARTKA! WPO_CM Two
+  • KONTUZJA! KRA_CM Two pauzuje 2 mecze!
+  • Wynik końcowy: 3:2
+  • Zwycięstwo Warta Poznan!
+
+================================ KONIEC RAPORTU ================================
