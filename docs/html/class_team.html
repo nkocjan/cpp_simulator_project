@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja klasy Team</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_team.html','','class_team-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy Team</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Reprezentuje druzyne ligowa i jej statystyki zbiorcze.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_team_8h_source.html">Team.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aafabe5dc9a2c77b280ff07fe41b89fec" id="r_aafabe5dc9a2c77b280ff07fe41b89fec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aafabe5dc9a2c77b280ff07fe41b89fec">Team</a> (std::string _name)</td></tr>
+<tr class="memdesc:aafabe5dc9a2c77b280ff07fe41b89fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy druzyne.  <br /></td></tr>
+<tr class="memitem:acad9fa8ebd4df972421e452a2c49abc2" id="r_acad9fa8ebd4df972421e452a2c49abc2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acad9fa8ebd4df972421e452a2c49abc2">addPlayer</a> (std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; player)</td></tr>
+<tr class="memdesc:acad9fa8ebd4df972421e452a2c49abc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje pilkarza do kadry.  <br /></td></tr>
+<tr class="memitem:ab0858dc3440b41ef5b2f9ac3573c8f0a" id="r_ab0858dc3440b41ef5b2f9ac3573c8f0a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ab0858dc3440b41ef5b2f9ac3573c8f0a">calculateTeamStrength</a> () const</td></tr>
+<tr class="memitem:af5bf66ec1092c85c1a675d4271347968" id="r_af5bf66ec1092c85c1a675d4271347968"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#af5bf66ec1092c85c1a675d4271347968">calculateLineupStrength</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;lineup) const</td></tr>
+<tr class="memitem:abd78875654e91bf887ecd2f915f4a0b3" id="r_abd78875654e91bf887ecd2f915f4a0b3"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#abd78875654e91bf887ecd2f915f4a0b3">getName</a> () const</td></tr>
+<tr class="memitem:acd0961e53de3d005b9253b19139d3cf7" id="r_acd0961e53de3d005b9253b19139d3cf7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acd0961e53de3d005b9253b19139d3cf7">getPoints</a> () const</td></tr>
+<tr class="memitem:a26a6424453f2c78fae7c86328783ab59" id="r_a26a6424453f2c78fae7c86328783ab59"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a26a6424453f2c78fae7c86328783ab59">getGoalsScored</a> () const</td></tr>
+<tr class="memitem:af5d3a298c66e427c8ff4f87e81580ff3" id="r_af5d3a298c66e427c8ff4f87e81580ff3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af5d3a298c66e427c8ff4f87e81580ff3">getGoalsConceded</a> () const</td></tr>
+<tr class="memitem:a5119fb8930917549bcc43d688474e131" id="r_a5119fb8930917549bcc43d688474e131"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5119fb8930917549bcc43d688474e131">getMatchesPlayed</a> () const</td></tr>
+<tr class="memitem:a8dd09ed0a2c4afbde74263ca97af4cdf" id="r_a8dd09ed0a2c4afbde74263ca97af4cdf"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8dd09ed0a2c4afbde74263ca97af4cdf">getWins</a> () const</td></tr>
+<tr class="memitem:a14f07781a90e536eb35a4e01a0d60d31" id="r_a14f07781a90e536eb35a4e01a0d60d31"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a14f07781a90e536eb35a4e01a0d60d31">getDraws</a> () const</td></tr>
+<tr class="memitem:a022e0e12413353161f870c18e7e7eb0c" id="r_a022e0e12413353161f870c18e7e7eb0c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a022e0e12413353161f870c18e7e7eb0c">getLosses</a> () const</td></tr>
+<tr class="memitem:a4acc1c3077c7e08636dfcef359e7242f" id="r_a4acc1c3077c7e08636dfcef359e7242f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4acc1c3077c7e08636dfcef359e7242f">addPoints</a> (int p)</td></tr>
+<tr class="memdesc:a4acc1c3077c7e08636dfcef359e7242f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje punkty.  <br /></td></tr>
+<tr class="memitem:acdf11dfeed8edf1bbc1a295145360b03" id="r_acdf11dfeed8edf1bbc1a295145360b03"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acdf11dfeed8edf1bbc1a295145360b03">addGoalScored</a> (int g=1)</td></tr>
+<tr class="memdesc:acdf11dfeed8edf1bbc1a295145360b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza liczbe strzelonych goli.  <br /></td></tr>
+<tr class="memitem:a20dab5a033c8beeebf2814a72bebd0fc" id="r_a20dab5a033c8beeebf2814a72bebd0fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20dab5a033c8beeebf2814a72bebd0fc">addGoalConceded</a> (int g=1)</td></tr>
+<tr class="memdesc:a20dab5a033c8beeebf2814a72bebd0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza liczbe straconych goli.  <br /></td></tr>
+<tr class="memitem:aee3f6cd35b0b7f11d5ccebafce56e11f" id="r_aee3f6cd35b0b7f11d5ccebafce56e11f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee3f6cd35b0b7f11d5ccebafce56e11f">addMatch</a> ()</td></tr>
+<tr class="memdesc:aee3f6cd35b0b7f11d5ccebafce56e11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza licznik meczow.  <br /></td></tr>
+<tr class="memitem:ab0c0c28d3e7d652d0556783e668ce5bf" id="r_ab0c0c28d3e7d652d0556783e668ce5bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0c0c28d3e7d652d0556783e668ce5bf">addWin</a> ()</td></tr>
+<tr class="memdesc:ab0c0c28d3e7d652d0556783e668ce5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza licznik zwyciestw.  <br /></td></tr>
+<tr class="memitem:a83da2bcdf00aef61f544a334ee6aff3c" id="r_a83da2bcdf00aef61f544a334ee6aff3c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83da2bcdf00aef61f544a334ee6aff3c">addDraw</a> ()</td></tr>
+<tr class="memdesc:a83da2bcdf00aef61f544a334ee6aff3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza licznik remisow.  <br /></td></tr>
+<tr class="memitem:ab38b66fc15c542450ccb0a03995f4162" id="r_ab38b66fc15c542450ccb0a03995f4162"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab38b66fc15c542450ccb0a03995f4162">addLoss</a> ()</td></tr>
+<tr class="memdesc:ab38b66fc15c542450ccb0a03995f4162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwieksza licznik porazek.  <br /></td></tr>
+<tr class="memitem:a7b8b6501871228fc0afee8530aa261c0" id="r_a7b8b6501871228fc0afee8530aa261c0"><td class="memItemLeft">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7b8b6501871228fc0afee8530aa261c0">getPlayers</a> () const</td></tr>
+<tr class="memitem:aea46187bf4e13485d6c7da18d8d47761" id="r_aea46187bf4e13485d6c7da18d8d47761"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea46187bf4e13485d6c7da18d8d47761">hasPlayer</a> (const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;player) const</td></tr>
+<tr class="memitem:aebbf7a86933e782b4f4255379df94a3d" id="r_aebbf7a86933e782b4f4255379df94a3d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aebbf7a86933e782b4f4255379df94a3d">removePlayer</a> (const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;player)</td></tr>
+<tr class="memdesc:aebbf7a86933e782b4f4255379df94a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa zawodnika z kadry i składu wyjsciowego.  <br /></td></tr>
+<tr class="memitem:a679ce88873c00387f726ba922f49c3b3" id="r_a679ce88873c00387f726ba922f49c3b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a679ce88873c00387f726ba922f49c3b3">setDefaultLineup</a> ()</td></tr>
+<tr class="memdesc:a679ce88873c00387f726ba922f49c3b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia domyslny sklad 4-osobowy wg pozycji i overall.  <br /></td></tr>
+<tr class="memitem:a24e1bd2d80a7a287cbe590b40bf79b98" id="r_a24e1bd2d80a7a287cbe590b40bf79b98"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a24e1bd2d80a7a287cbe590b40bf79b98">setStarter</a> (<a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a> position, const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;player)</td></tr>
+<tr class="memdesc:a24e1bd2d80a7a287cbe590b40bf79b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia wskazanego gracza jako startera na podanej pozycji.  <br /></td></tr>
+<tr class="memitem:a0b7582ff8a656ce1fcc30f471fca1e35" id="r_a0b7582ff8a656ce1fcc30f471fca1e35"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b7582ff8a656ce1fcc30f471fca1e35">getStarter</a> (<a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a> position) const</td></tr>
+<tr class="memitem:acc94397fd4bfe302fcc604c7eaa47629" id="r_acc94397fd4bfe302fcc604c7eaa47629"><td class="memItemLeft">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acc94397fd4bfe302fcc604c7eaa47629">getBenchPlayers</a> () const</td></tr>
+<tr class="memitem:aa6c0fca251ceefcae188f4a2d28f125e" id="r_aa6c0fca251ceefcae188f4a2d28f125e"><td class="memItemLeft">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa6c0fca251ceefcae188f4a2d28f125e">buildMatchLineup</a> (bool &amp;walkover) const</td></tr>
+<tr class="memdesc:aa6c0fca251ceefcae188f4a2d28f125e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buduje sklad meczowy 4 zawodnikow.  <br /></td></tr>
+<tr class="memitem:aee9abfd12b9b741922a0e6a3b2984891" id="r_aee9abfd12b9b741922a0e6a3b2984891"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee9abfd12b9b741922a0e6a3b2984891">recoverConditionForNonPlaying</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;playedPlayers, double amount=20.0)</td></tr>
+<tr class="memdesc:aee9abfd12b9b741922a0e6a3b2984891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regeneruje kondycje pilkarzy, ktorzy nie zagrali w meczu.  <br /></td></tr>
+<tr class="memitem:a373816e3eaccc0b38a98530530da621b" id="r_a373816e3eaccc0b38a98530530da621b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a373816e3eaccc0b38a98530530da621b">decrementUnavailablePlayers</a> ()</td></tr>
+<tr class="memdesc:a373816e3eaccc0b38a98530530da621b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmniejsza pauzy (kontuzje/zawieszenia) po rozegranej kolejce.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Reprezentuje druzyne ligowa i jej statystyki zbiorcze. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="aafabe5dc9a2c77b280ff07fe41b89fec" name="aafabe5dc9a2c77b280ff07fe41b89fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafabe5dc9a2c77b280ff07fe41b89fec">&#9670;&#160;</a></span>Team()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Team::Team </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tworzy druzyne. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>Nazwa druzyny. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a83da2bcdf00aef61f544a334ee6aff3c" name="a83da2bcdf00aef61f544a334ee6aff3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83da2bcdf00aef61f544a334ee6aff3c">&#9670;&#160;</a></span>addDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addDraw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza licznik remisow. </p>
+
+</div>
+</div>
+<a id="a20dab5a033c8beeebf2814a72bebd0fc" name="a20dab5a033c8beeebf2814a72bebd0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20dab5a033c8beeebf2814a72bebd0fc">&#9670;&#160;</a></span>addGoalConceded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addGoalConceded </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza liczbe straconych goli. </p>
+
+</div>
+</div>
+<a id="acdf11dfeed8edf1bbc1a295145360b03" name="acdf11dfeed8edf1bbc1a295145360b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf11dfeed8edf1bbc1a295145360b03">&#9670;&#160;</a></span>addGoalScored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addGoalScored </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza liczbe strzelonych goli. </p>
+
+</div>
+</div>
+<a id="ab38b66fc15c542450ccb0a03995f4162" name="ab38b66fc15c542450ccb0a03995f4162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38b66fc15c542450ccb0a03995f4162">&#9670;&#160;</a></span>addLoss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addLoss </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza licznik porazek. </p>
+
+</div>
+</div>
+<a id="aee3f6cd35b0b7f11d5ccebafce56e11f" name="aee3f6cd35b0b7f11d5ccebafce56e11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3f6cd35b0b7f11d5ccebafce56e11f">&#9670;&#160;</a></span>addMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addMatch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza licznik meczow. </p>
+
+</div>
+</div>
+<a id="acad9fa8ebd4df972421e452a2c49abc2" name="acad9fa8ebd4df972421e452a2c49abc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad9fa8ebd4df972421e452a2c49abc2">&#9670;&#160;</a></span>addPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addPlayer </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje pilkarza do kadry. </p>
+
+</div>
+</div>
+<a id="a4acc1c3077c7e08636dfcef359e7242f" name="a4acc1c3077c7e08636dfcef359e7242f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4acc1c3077c7e08636dfcef359e7242f">&#9670;&#160;</a></span>addPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addPoints </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje punkty. </p>
+
+</div>
+</div>
+<a id="ab0c0c28d3e7d652d0556783e668ce5bf" name="ab0c0c28d3e7d652d0556783e668ce5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c0c28d3e7d652d0556783e668ce5bf">&#9670;&#160;</a></span>addWin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::addWin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwieksza licznik zwyciestw. </p>
+
+</div>
+</div>
+<a id="aa6c0fca251ceefcae188f4a2d28f125e" name="aa6c0fca251ceefcae188f4a2d28f125e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c0fca251ceefcae188f4a2d28f125e">&#9670;&#160;</a></span>buildMatchLineup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; Team::buildMatchLineup </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>walkover</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buduje sklad meczowy 4 zawodnikow. </p>
+<p>Jesli starter jest niedostepny, probuje zastapic go graczem z tej samej pozycji, a gdy to niemozliwe - najlepszym dostepnym overall. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">walkover</td><td>Ustawiane na true, gdy nie da sie zestawic 4 graczy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Lista zawodnikow wystawionych na mecz. </dd></dl>
+
+</div>
+</div>
+<a id="af5bf66ec1092c85c1a675d4271347968" name="af5bf66ec1092c85c1a675d4271347968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5bf66ec1092c85c1a675d4271347968">&#9670;&#160;</a></span>calculateLineupStrength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Team::calculateLineupStrength </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lineup</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Srednia sila przekazanej czworki meczowej. Uwzglednia oslabienie za gre poza naturalna pozycja i kondycje. </dd></dl>
+
+</div>
+</div>
+<a id="ab0858dc3440b41ef5b2f9ac3573c8f0a" name="ab0858dc3440b41ef5b2f9ac3573c8f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0858dc3440b41ef5b2f9ac3573c8f0a">&#9670;&#160;</a></span>calculateTeamStrength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Team::calculateTeamStrength </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Srednia sila wszystkich zawodnikow w kadrze. </dd></dl>
+
+</div>
+</div>
+<a id="a373816e3eaccc0b38a98530530da621b" name="a373816e3eaccc0b38a98530530da621b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373816e3eaccc0b38a98530530da621b">&#9670;&#160;</a></span>decrementUnavailablePlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::decrementUnavailablePlayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmniejsza pauzy (kontuzje/zawieszenia) po rozegranej kolejce. </p>
+
+</div>
+</div>
+<a id="acc94397fd4bfe302fcc604c7eaa47629" name="acc94397fd4bfe302fcc604c7eaa47629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc94397fd4bfe302fcc604c7eaa47629">&#9670;&#160;</a></span>getBenchPlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; Team::getBenchPlayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Lista rezerwowych (poza skladem wyjsciowym). </dd></dl>
+
+</div>
+</div>
+<a id="a14f07781a90e536eb35a4e01a0d60d31" name="a14f07781a90e536eb35a4e01a0d60d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f07781a90e536eb35a4e01a0d60d31">&#9670;&#160;</a></span>getDraws()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getDraws </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba remisow. </dd></dl>
+
+</div>
+</div>
+<a id="af5d3a298c66e427c8ff4f87e81580ff3" name="af5d3a298c66e427c8ff4f87e81580ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d3a298c66e427c8ff4f87e81580ff3">&#9670;&#160;</a></span>getGoalsConceded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getGoalsConceded </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba straconych goli. </dd></dl>
+
+</div>
+</div>
+<a id="a26a6424453f2c78fae7c86328783ab59" name="a26a6424453f2c78fae7c86328783ab59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a6424453f2c78fae7c86328783ab59">&#9670;&#160;</a></span>getGoalsScored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getGoalsScored </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba strzelonych goli. </dd></dl>
+
+</div>
+</div>
+<a id="a022e0e12413353161f870c18e7e7eb0c" name="a022e0e12413353161f870c18e7e7eb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022e0e12413353161f870c18e7e7eb0c">&#9670;&#160;</a></span>getLosses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getLosses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba porazek. </dd></dl>
+
+</div>
+</div>
+<a id="a5119fb8930917549bcc43d688474e131" name="a5119fb8930917549bcc43d688474e131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5119fb8930917549bcc43d688474e131">&#9670;&#160;</a></span>getMatchesPlayed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getMatchesPlayed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba rozegranych meczow. </dd></dl>
+
+</div>
+</div>
+<a id="abd78875654e91bf887ecd2f915f4a0b3" name="abd78875654e91bf887ecd2f915f4a0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd78875654e91bf887ecd2f915f4a0b3">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Team::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Nazwa druzyny. </dd></dl>
+
+</div>
+</div>
+<a id="a7b8b6501871228fc0afee8530aa261c0" name="a7b8b6501871228fc0afee8530aa261c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8b6501871228fc0afee8530aa261c0">&#9670;&#160;</a></span>getPlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp; Team::getPlayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Lista pilkarzy druzyny. </dd></dl>
+
+</div>
+</div>
+<a id="acd0961e53de3d005b9253b19139d3cf7" name="acd0961e53de3d005b9253b19139d3cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0961e53de3d005b9253b19139d3cf7">&#9670;&#160;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getPoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba punktow druzyny. </dd></dl>
+
+</div>
+</div>
+<a id="a0b7582ff8a656ce1fcc30f471fca1e35" name="a0b7582ff8a656ce1fcc30f471fca1e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7582ff8a656ce1fcc30f471fca1e35">&#9670;&#160;</a></span>getStarter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; Team::getStarter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Starter z danej pozycji lub nullptr. </dd></dl>
+
+</div>
+</div>
+<a id="a8dd09ed0a2c4afbde74263ca97af4cdf" name="a8dd09ed0a2c4afbde74263ca97af4cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd09ed0a2c4afbde74263ca97af4cdf">&#9670;&#160;</a></span>getWins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Team::getWins </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba zwyciestw. </dd></dl>
+
+</div>
+</div>
+<a id="aea46187bf4e13485d6c7da18d8d47761" name="aea46187bf4e13485d6c7da18d8d47761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea46187bf4e13485d6c7da18d8d47761">&#9670;&#160;</a></span>hasPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Team::hasPlayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>true, gdy zawodnik jest w kadrze druzyny. </dd></dl>
+
+</div>
+</div>
+<a id="aee9abfd12b9b741922a0e6a3b2984891" name="aee9abfd12b9b741922a0e6a3b2984891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9abfd12b9b741922a0e6a3b2984891">&#9670;&#160;</a></span>recoverConditionForNonPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::recoverConditionForNonPlaying </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>playedPlayers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>amount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">20.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Regeneruje kondycje pilkarzy, ktorzy nie zagrali w meczu. </p>
+
+</div>
+</div>
+<a id="aebbf7a86933e782b4f4255379df94a3d" name="aebbf7a86933e782b4f4255379df94a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebbf7a86933e782b4f4255379df94a3d">&#9670;&#160;</a></span>removePlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Team::removePlayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Usuwa zawodnika z kadry i składu wyjsciowego. </p>
+
+</div>
+</div>
+<a id="a679ce88873c00387f726ba922f49c3b3" name="a679ce88873c00387f726ba922f49c3b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679ce88873c00387f726ba922f49c3b3">&#9670;&#160;</a></span>setDefaultLineup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Team::setDefaultLineup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia domyslny sklad 4-osobowy wg pozycji i overall. </p>
+
+</div>
+</div>
+<a id="a24e1bd2d80a7a287cbe590b40bf79b98" name="a24e1bd2d80a7a287cbe590b40bf79b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e1bd2d80a7a287cbe590b40bf79b98">&#9670;&#160;</a></span>setStarter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Team::setStarter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia wskazanego gracza jako startera na podanej pozycji. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>core/headers/<a class="el" href="_team_8h_source.html">Team.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_team.html">Team</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

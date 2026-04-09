@@ -11,7 +11,8 @@ Player::Player(std::string _name, std::string _surname, double _condition, int _
       redCards("Red Cards", 0, 0, 2),
       minutesPlayed("Minutes Played", 0, 0, 999999),
       morale("Morale", 75.0, 0.0, 100.0),
-      injuryDuration(0) {}
+      injuryDuration(0),
+      suspensionDuration(0) {}
 
 std::string Player::getName() const {
     return name;
@@ -57,6 +58,14 @@ int Player::getInjuryDuration() const {
     return injuryDuration;
 }
 
+int Player::getSuspensionDuration() const {
+    return suspensionDuration;
+}
+
+bool Player::isAvailable() const {
+    return injuryDuration <= 0 && suspensionDuration <= 0;
+}
+
 void Player::setCondition(double value) {
     condition.setValue(value);
 }
@@ -89,6 +98,26 @@ void Player::setMorale(double value) {
     morale.setValue(value);
 }
 
+void Player::adjustMorale(double delta) {
+    morale.add(delta);
+}
+
 void Player::setInjuryDuration(int duration) {
-    injuryDuration = duration;
+    injuryDuration = duration < 0 ? 0 : duration;
+}
+
+void Player::setSuspensionDuration(int duration) {
+    suspensionDuration = duration < 0 ? 0 : duration;
+}
+
+void Player::decrementInjuryDuration() {
+    if (injuryDuration > 0) {
+        --injuryDuration;
+    }
+}
+
+void Player::decrementSuspensionDuration() {
+    if (suspensionDuration > 0) {
+        --suspensionDuration;
+    }
 }

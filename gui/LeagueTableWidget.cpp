@@ -3,6 +3,7 @@
 #include <QHeaderView>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QListWidget>
 #include <QPushButton>
 #include <QTableWidget>
 #include <QTableWidgetItem>
@@ -13,6 +14,7 @@ LeagueTableWidget::LeagueTableWidget(QWidget *parent)
     , titleLabel(nullptr)
     , statusLabel(nullptr)
     , tableWidget(nullptr)
+    , playerTeamLogList(nullptr)
     , simulateNextButton(nullptr)
     , simulateAllButton(nullptr)
 {
@@ -46,9 +48,19 @@ void LeagueTableWidget::setupUi()
     buttonsLayout->addWidget(simulateNextButton);
     buttonsLayout->addWidget(simulateAllButton);
 
+    auto *logTitleLabel = new QLabel("Log akcji Twojej druzyny", this);
+    QFont logFont = logTitleLabel->font();
+    logFont.setBold(true);
+    logTitleLabel->setFont(logFont);
+
+    playerTeamLogList = new QListWidget(this);
+    playerTeamLogList->setMinimumHeight(170);
+
     mainLayout->addWidget(titleLabel);
     mainLayout->addWidget(statusLabel);
     mainLayout->addWidget(tableWidget);
+    mainLayout->addWidget(logTitleLabel);
+    mainLayout->addWidget(playerTeamLogList);
     mainLayout->addLayout(buttonsLayout);
 
     connect(simulateNextButton, &QPushButton::clicked, this, &LeagueTableWidget::simulateNextRequested);
@@ -64,10 +76,52 @@ void LeagueTableWidget::setupUi()
     });
 }
 
+void LeagueTableWidget::refreshPlayerTeamLog(const std::vector<std::vector<std::shared_ptr<Match>>> &schedule,
+                                             const std::shared_ptr<Team> &playerTeam)
+{
+    playerTeamLogList->clear();
+
+    if (!playerTeam) {
+        playerTeamLogList->addItem("Najpierw wybierz druzyne gracza.");
+        return;
+    }
+
+    bool anyEvent = false;
+    for (int day = 0; day < static_cast<int>(schedule.size()); ++day) {
+        for (const auto& match : schedule[static_cast<size_t>(day)]) {
+            const bool isPlayerTeamMatch =
+                (match->getHomeTeam() == playerTeam) || (match->getAwayTeam() == playerTeam);
+            if (!isPlayerTeamMatch || !match->getIsFinished()) {
+                continue;
+            }
+
+            anyEvent = true;
+            const QString header = QString("Kolejka %1 | %2 vs %3 | wynik %4:%5")
+                                       .arg(day + 1)
+                                       .arg(QString::fromStdString(match->getHomeTeam()->getName()))
+                                       .arg(QString::fromStdString(match->getAwayTeam()->getName()))
+                                       .arg(match->getHomeGoals())
+                                       .arg(match->getAwayGoals());
+            playerTeamLogList->addItem(header);
+
+            const auto& events = match->getMatchEvents();
+            for (const auto& eventLine : events) {
+                playerTeamLogList->addItem("  - " + QString::fromStdString(eventLine));
+            }
+        }
+    }
+
+    if (!anyEvent) {
+        playerTeamLogList->addItem("Brak rozegranych meczow Twojej druzyny.");
+    }
+}
+
 void LeagueTableWidget::refreshTable(const std::vector<std::shared_ptr<Team>> &teams,
                                      int currentMatchday,
                                      int totalMatchdays,
-                                     bool leagueFinished)
+                                     bool leagueFinished,
+                                     const std::vector<std::vector<std::shared_ptr<Match>>> &schedule,
+                                     const std::shared_ptr<Team> &playerTeam)
 {
     tableWidget->setRowCount(static_cast<int>(teams.size()));
 
@@ -97,5 +151,6 @@ void LeagueTableWidget::refreshTable(const std::vector<std::shared_ptr<Team>> &t
     if (leagueFinished) {
         statusLabel->setText(statusLabel->text() + " (Liga zakonczona)");
     }
-}
 
+    refreshPlayerTeamLog(schedule, playerTeam);
+}

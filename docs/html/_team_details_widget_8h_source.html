@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Plik źródłowy gui/TeamDetailsWidget.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_team_details_widget_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TeamDetailsWidget.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_team_details_widget_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FIFA26_SIMULATOR_TEAMDETAILSWIDGET_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FIFA26_SIMULATOR_TEAMDETAILSWIDGET_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_match_8h.html">Match.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_team_8h.html">Team.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span>QComboBox;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span>QLabel;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>QListWidget;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span>QPushButton;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span>QTableWidget;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_team_details_widget.html">   26</a></span><span class="keyword">class </span><a class="code hl_function" href="class_team_details_widget.html#a03b869a288966d5767162dc7ee91edfd">TeamDetailsWidget</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    Q_OBJECT</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_team_details_widget.html#a03b869a288966d5767162dc7ee91edfd">TeamDetailsWidget</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_team_details_widget.html#a85d788670adaea4a0933ecbc4f24e9d6">refreshData</a>(<span class="keyword">const</span> std::vector&lt;std::shared_ptr&lt;Team&gt;&gt; &amp;teams,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                     <span class="keyword">const</span> std::shared_ptr&lt;Team&gt; &amp;preferredTeam,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                     <span class="keyword">const</span> std::vector&lt;std::vector&lt;std::shared_ptr&lt;Match&gt;&gt;&gt; &amp;schedule);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_team_details_widget.html#a56fe102a1f38359d9861a724efaa85c2">selectTeamByName</a>(<span class="keyword">const</span> QString &amp;teamName);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_team_details_widget.html#aa43caadf945811f1edf5d9414074bf4b">setTransferEditorEnabled</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>signals:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_team_details_widget.html#a4c34c20cc03ddcdbb41d2a47f13f8782">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_team_details_widget.html#a4c34c20cc03ddcdbb41d2a47f13f8782">lineupEdited</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_team_details_widget.html#ab62738642c9b2c3649ccd52896d1b6ea">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_team_details_widget.html#ab62738642c9b2c3649ccd52896d1b6ea">playerSelectedRequested</a>(<span class="keyword">const</span> QString&amp; teamName, <span class="keywordtype">int</span> playerIndex);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_team_details_widget.html#aee4a61a37c58f5c3b51627c25b741eee">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_team_details_widget.html#aee4a61a37c58f5c3b51627c25b741eee">transferRequested</a>(<span class="keyword">const</span> QString&amp; fromTeam,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                           <span class="keyword">const</span> QString&amp; toTeam,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                           <span class="keyword">const</span> QString&amp; playerName,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                           <span class="keyword">const</span> QString&amp; playerSurname);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_team_details_widget.html#a8505aecedb1a97b68feb78a1e9e868a4">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_team_details_widget.html#a8505aecedb1a97b68feb78a1e9e868a4">phaseAdvanceRequested</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    QComboBox *teamSelector;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    QLabel *teamStatsLabel;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    QTableWidget *playersTable;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    QListWidget *historyList;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QListWidget *upcomingList;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QListWidget *unavailableList;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    QComboBox *gkStarterCombo;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QComboBox *defStarterCombo;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QComboBox *midStarterCombo;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    QComboBox *stStarterCombo;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    QPushButton *applyLineupButton;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    QLabel *lineupEditorInfoLabel;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    QComboBox *transferFromTeamCombo;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    QComboBox *transferPlayerCombo;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    QPushButton *transferButton;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    QPushButton *confirmTransfersButton;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    QLabel *transferInfoLabel;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::vector&lt;std::shared_ptr&lt;Team&gt;&gt; teamsCache;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::vector&lt;std::vector&lt;std::shared_ptr&lt;Match&gt;&gt;&gt; scheduleCache;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::shared_ptr&lt;Team&gt; playerTeamCache;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">bool</span> transferEditorEnabled;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> setupUi();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> renderSelectedTeam();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> populateLineupEditor(<span class="keyword">const</span> std::shared_ptr&lt;Team&gt;&amp; team, <span class="keywordtype">bool</span> isPlayerTeam);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    std::shared_ptr&lt;Player&gt; comboSelectionToPlayer(QComboBox *combo, <span class="keyword">const</span> std::shared_ptr&lt;Team&gt;&amp; team) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> populateTransferEditor(<span class="keyword">const</span> std::shared_ptr&lt;Team&gt;&amp; selectedTeam, <span class="keywordtype">bool</span> isPlayerTeam);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_match_8h_html"><div class="ttname"><a href="_match_8h.html">Match.h</a></div><div class="ttdoc">Deklaracja klasy pojedynczego meczu.</div></div>
+<div class="ttc" id="a_team_8h_html"><div class="ttname"><a href="_team_8h.html">Team.h</a></div><div class="ttdoc">Deklaracja klasy druzyny.</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_a03b869a288966d5767162dc7ee91edfd"><div class="ttname"><a href="class_team_details_widget.html#a03b869a288966d5767162dc7ee91edfd">TeamDetailsWidget::TeamDetailsWidget</a></div><div class="ttdeci">TeamDetailsWidget(QWidget *parent=nullptr)</div><div class="ttdoc">Tworzy widget szczegolow druzyny.</div><div class="ttdef"><b>Definicja</b> TeamDetailsWidget.cpp:27</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_a4c34c20cc03ddcdbb41d2a47f13f8782"><div class="ttname"><a href="class_team_details_widget.html#a4c34c20cc03ddcdbb41d2a47f13f8782">TeamDetailsWidget::lineupEdited</a></div><div class="ttdeci">void lineupEdited()</div><div class="ttdoc">Emitowany po ręcznej zmianie składu wyjściowego.</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_a56fe102a1f38359d9861a724efaa85c2"><div class="ttname"><a href="class_team_details_widget.html#a56fe102a1f38359d9861a724efaa85c2">TeamDetailsWidget::selectTeamByName</a></div><div class="ttdeci">void selectTeamByName(const QString &amp;teamName)</div><div class="ttdoc">Ustawia aktywna druzyne po nazwie.</div><div class="ttdef"><b>Definicja</b> TeamDetailsWidget.cpp:277</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_a8505aecedb1a97b68feb78a1e9e868a4"><div class="ttname"><a href="class_team_details_widget.html#a8505aecedb1a97b68feb78a1e9e868a4">TeamDetailsWidget::phaseAdvanceRequested</a></div><div class="ttdeci">void phaseAdvanceRequested()</div><div class="ttdoc">Sygnał do przejścia do następnego etapu przygotowania.</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_a85d788670adaea4a0933ecbc4f24e9d6"><div class="ttname"><a href="class_team_details_widget.html#a85d788670adaea4a0933ecbc4f24e9d6">TeamDetailsWidget::refreshData</a></div><div class="ttdeci">void refreshData(const std::vector&lt; std::shared_ptr&lt; Team &gt; &gt; &amp;teams, const std::shared_ptr&lt; Team &gt; &amp;preferredTeam, const std::vector&lt; std::vector&lt; std::shared_ptr&lt; Match &gt; &gt; &gt; &amp;schedule)</div><div class="ttdoc">Odswieza caly widok na podstawie danych ligi.</div><div class="ttdef"><b>Definicja</b> TeamDetailsWidget.cpp:247</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_aa43caadf945811f1edf5d9414074bf4b"><div class="ttname"><a href="class_team_details_widget.html#aa43caadf945811f1edf5d9414074bf4b">TeamDetailsWidget::setTransferEditorEnabled</a></div><div class="ttdeci">void setTransferEditorEnabled(bool enabled)</div><div class="ttdoc">Globalnie wlacza lub blokuje sekcje transferow.</div><div class="ttdef"><b>Definicja</b> TeamDetailsWidget.cpp:350</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_ab62738642c9b2c3649ccd52896d1b6ea"><div class="ttname"><a href="class_team_details_widget.html#ab62738642c9b2c3649ccd52896d1b6ea">TeamDetailsWidget::playerSelectedRequested</a></div><div class="ttdeci">void playerSelectedRequested(const QString &amp;teamName, int playerIndex)</div><div class="ttdoc">Prosba o pokazanie szczegolow wybranego zawodnika.</div></div>
+<div class="ttc" id="aclass_team_details_widget_html_aee4a61a37c58f5c3b51627c25b741eee"><div class="ttname"><a href="class_team_details_widget.html#aee4a61a37c58f5c3b51627c25b741eee">TeamDetailsWidget::transferRequested</a></div><div class="ttdeci">void transferRequested(const QString &amp;fromTeam, const QString &amp;toTeam, const QString &amp;playerName, const QString &amp;playerSurname)</div><div class="ttdoc">Prosba o transfer zawodnika miedzy klubami.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_11bc0974ce736ce9a6fadebbeb7a8314.html">gui</a></li><li class="navelem"><a href="_team_details_widget_8h.html">TeamDetailsWidget.h</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

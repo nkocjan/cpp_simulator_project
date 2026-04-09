@@ -9,6 +9,10 @@ double Midfielder::calculateGoalChance() const {
     return (overall.getValue() * 0.55) + (passingVision.getValue() * 0.45) * (condition.getValue() / 100.0);
 }
 
+PlayerPosition Midfielder::getNaturalPosition() const {
+    return PlayerPosition::Midfielder;
+}
+
 int Midfielder::getPassingVision() const {
     return passingVision.getValue();
 }

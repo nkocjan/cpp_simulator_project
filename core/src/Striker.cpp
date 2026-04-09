@@ -9,6 +9,10 @@ double Striker::calculateGoalChance() const {
     return (overall.getValue() * 0.5) + (shootingFinishing.getValue() * 0.5) * (condition.getValue() / 100.0);
 }
 
+PlayerPosition Striker::getNaturalPosition() const {
+    return PlayerPosition::Striker;
+}
+
 int Striker::getShootingFinishing() const {
     return shootingFinishing.getValue();
 }

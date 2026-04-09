@@ -21,6 +21,7 @@ private:
     std::shared_ptr<Team> playerTeam;
     std::vector<std::vector<std::shared_ptr<Match>>> schedule;
     int currentMatchday;
+    int randomnessPercent;
 
 public:
     /** @brief Tworzy pusty silnik ligi. */
@@ -37,6 +38,11 @@ public:
      * (u siebie i na wyjezdzie), a kazda druzyna rozgrywa 2*(n-1) meczow.
      */
     void generateSchedule();
+
+    /** @brief Ustawia poziom losowosci symulacji (0-100). */
+    void setRandomnessPercent(int value);
+    /** @return Aktualny poziom losowosci symulacji. */
+    [[nodiscard]] int getRandomnessPercent() const;
 
     /** @brief Symuluje nastepna kolejke. */
     void simulateNextMatchday();
@@ -60,6 +66,24 @@ public:
     [[nodiscard]] int getCurrentMatchday() const;
     /** @return Liczba wszystkich kolejek. */
     [[nodiscard]] int getTotalMatchdays() const;
+
+    /**
+     * @brief Aktualizuje slot weekendowy pojedynczego meczu.
+     * @param matchdayIndex Indeks kolejki (0-based).
+     * @param matchIndex Indeks meczu w kolejce (0-based).
+     * @param newSlot Nowy opis terminu.
+     * @return true, jesli slot zostal zmieniony.
+     */
+    bool updateMatchSlot(size_t matchdayIndex, size_t matchIndex, const std::string& newSlot);
+
+    /**
+     * @brief Przeprowadza transfer zawodnika miedzy klubami.
+     * @return true, jesli transfer zakonczyl sie sukcesem.
+     */
+    bool transferPlayer(const std::string& fromTeamName,
+                        const std::string& toTeamName,
+                        const std::string& playerName,
+                        const std::string& playerSurname);
 };
 
-#endif //FIFA26_SIMULATOR_LEAGUEENGINE_H
+#endif

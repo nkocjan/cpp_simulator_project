@@ -23,6 +23,8 @@ public:
 
     /** @copydoc Player::calculateGoalChance */
     double calculateGoalChance() const override;
+    /** @copydoc Player::getNaturalPosition */
+    PlayerPosition getNaturalPosition() const override;
 
     /** @return Wartosc passing vision. */
     int getPassingVision() const;

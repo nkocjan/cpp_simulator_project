@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja klasy LeagueEngine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_league_engine.html','','class_league_engine-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy LeagueEngine</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa menedzera ligi (druzyny, terminarz, symulacja, tabela).  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_league_engine_8h_source.html">LeagueEngine.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a0822ac3fba5e80efc20c6c2d4eb09ac1" id="r_a0822ac3fba5e80efc20c6c2d4eb09ac1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0822ac3fba5e80efc20c6c2d4eb09ac1">LeagueEngine</a> ()</td></tr>
+<tr class="memdesc:a0822ac3fba5e80efc20c6c2d4eb09ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy pusty silnik ligi.  <br /></td></tr>
+<tr class="memitem:a3777b6f294b255ea6e556e9894d3342a" id="r_a3777b6f294b255ea6e556e9894d3342a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3777b6f294b255ea6e556e9894d3342a">addTeam</a> (std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; team)</td></tr>
+<tr class="memdesc:a3777b6f294b255ea6e556e9894d3342a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje druzyne do ligi.  <br /></td></tr>
+<tr class="memitem:ae8b9d57aeb6f52562effcdd0357f42f9" id="r_ae8b9d57aeb6f52562effcdd0357f42f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae8b9d57aeb6f52562effcdd0357f42f9">setPlayerTeam</a> (const std::string &amp;teamName)</td></tr>
+<tr class="memdesc:ae8b9d57aeb6f52562effcdd0357f42f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia druzyne gracza po nazwie.  <br /></td></tr>
+<tr class="memitem:af246556316522e9511c85adc671ea3c3" id="r_af246556316522e9511c85adc671ea3c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af246556316522e9511c85adc671ea3c3">generateSchedule</a> ()</td></tr>
+<tr class="memdesc:af246556316522e9511c85adc671ea3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generuje terminarz round-robin (mecz i rewanz) dla parzystej liczby druzyn.  <br /></td></tr>
+<tr class="memitem:a649008c778b0bdd5f409405cdd769b7d" id="r_a649008c778b0bdd5f409405cdd769b7d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a649008c778b0bdd5f409405cdd769b7d">setRandomnessPercent</a> (int value)</td></tr>
+<tr class="memdesc:a649008c778b0bdd5f409405cdd769b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia poziom losowosci symulacji (0-100).  <br /></td></tr>
+<tr class="memitem:ad7317c3339056955762ef8a653c94ce5" id="r_ad7317c3339056955762ef8a653c94ce5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad7317c3339056955762ef8a653c94ce5">getRandomnessPercent</a> () const</td></tr>
+<tr class="memitem:ace45c4fdbdf56861cb8a714992838657" id="r_ace45c4fdbdf56861cb8a714992838657"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace45c4fdbdf56861cb8a714992838657">simulateNextMatchday</a> ()</td></tr>
+<tr class="memdesc:ace45c4fdbdf56861cb8a714992838657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symuluje nastepna kolejke.  <br /></td></tr>
+<tr class="memitem:adbb61a7f3427cb0d1f41a89411da9389" id="r_adbb61a7f3427cb0d1f41a89411da9389"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adbb61a7f3427cb0d1f41a89411da9389">isLeagueFinished</a> () const</td></tr>
+<tr class="memitem:a5883c9f519acd5457e7989063ec4384a" id="r_a5883c9f519acd5457e7989063ec4384a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5883c9f519acd5457e7989063ec4384a">sortTable</a> ()</td></tr>
+<tr class="memdesc:a5883c9f519acd5457e7989063ec4384a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortuje tabele ligowa wedlug punktow i bilansu.  <br /></td></tr>
+<tr class="memitem:a3f5249497e55a1f10e2d05edfabd4c58" id="r_a3f5249497e55a1f10e2d05edfabd4c58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f5249497e55a1f10e2d05edfabd4c58">displayTable</a> () const</td></tr>
+<tr class="memdesc:a3f5249497e55a1f10e2d05edfabd4c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisuje tabele do konsoli.  <br /></td></tr>
+<tr class="memitem:a8b53f1f9725fc8bb28a5d93c5fd3250b" id="r_a8b53f1f9725fc8bb28a5d93c5fd3250b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8b53f1f9725fc8bb28a5d93c5fd3250b">exportToFile</a> (const std::string &amp;filename) const</td></tr>
+<tr class="memdesc:a8b53f1f9725fc8bb28a5d93c5fd3250b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eksportuje tabele i historie meczow do pliku.  <br /></td></tr>
+<tr class="memitem:ae0b79bbee14ffb9adda6a17a9c347749" id="r_ae0b79bbee14ffb9adda6a17a9c347749"><td class="memItemLeft">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0b79bbee14ffb9adda6a17a9c347749">getTeams</a> () const</td></tr>
+<tr class="memitem:aa56fdfcab34b7905627fc17be809646d" id="r_aa56fdfcab34b7905627fc17be809646d"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa56fdfcab34b7905627fc17be809646d">getPlayerTeam</a> () const</td></tr>
+<tr class="memitem:a77f910cfb55279275503a541dc2dec9e" id="r_a77f910cfb55279275503a541dc2dec9e"><td class="memItemLeft">const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a77f910cfb55279275503a541dc2dec9e">getSchedule</a> () const</td></tr>
+<tr class="memitem:a1b6607c4cd84a96fb037e4b0645ed549" id="r_a1b6607c4cd84a96fb037e4b0645ed549"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1b6607c4cd84a96fb037e4b0645ed549">getCurrentMatchday</a> () const</td></tr>
+<tr class="memitem:af048a0c15070a6131f6365b93462df75" id="r_af048a0c15070a6131f6365b93462df75"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af048a0c15070a6131f6365b93462df75">getTotalMatchdays</a> () const</td></tr>
+<tr class="memitem:a7747555a04cc57ff874aae08affeac96" id="r_a7747555a04cc57ff874aae08affeac96"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7747555a04cc57ff874aae08affeac96">updateMatchSlot</a> (size_t matchdayIndex, size_t matchIndex, const std::string &amp;newSlot)</td></tr>
+<tr class="memdesc:a7747555a04cc57ff874aae08affeac96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje slot weekendowy pojedynczego meczu.  <br /></td></tr>
+<tr class="memitem:aad7813e1721ac6fd24063084d9fd1f09" id="r_aad7813e1721ac6fd24063084d9fd1f09"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aad7813e1721ac6fd24063084d9fd1f09">transferPlayer</a> (const std::string &amp;fromTeamName, const std::string &amp;toTeamName, const std::string &amp;playerName, const std::string &amp;playerSurname)</td></tr>
+<tr class="memdesc:aad7813e1721ac6fd24063084d9fd1f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeprowadza transfer zawodnika miedzy klubami.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa menedzera ligi (druzyny, terminarz, symulacja, tabela). </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a0822ac3fba5e80efc20c6c2d4eb09ac1" name="a0822ac3fba5e80efc20c6c2d4eb09ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0822ac3fba5e80efc20c6c2d4eb09ac1">&#9670;&#160;</a></span>LeagueEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LeagueEngine::LeagueEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy pusty silnik ligi. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a3777b6f294b255ea6e556e9894d3342a" name="a3777b6f294b255ea6e556e9894d3342a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3777b6f294b255ea6e556e9894d3342a">&#9670;&#160;</a></span>addTeam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::addTeam </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>team</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje druzyne do ligi. </p>
+
+</div>
+</div>
+<a id="a3f5249497e55a1f10e2d05edfabd4c58" name="a3f5249497e55a1f10e2d05edfabd4c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5249497e55a1f10e2d05edfabd4c58">&#9670;&#160;</a></span>displayTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::displayTable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wypisuje tabele do konsoli. </p>
+
+</div>
+</div>
+<a id="a8b53f1f9725fc8bb28a5d93c5fd3250b" name="a8b53f1f9725fc8bb28a5d93c5fd3250b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b53f1f9725fc8bb28a5d93c5fd3250b">&#9670;&#160;</a></span>exportToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::exportToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Eksportuje tabele i historie meczow do pliku. </p>
+
+</div>
+</div>
+<a id="af246556316522e9511c85adc671ea3c3" name="af246556316522e9511c85adc671ea3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af246556316522e9511c85adc671ea3c3">&#9670;&#160;</a></span>generateSchedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::generateSchedule </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generuje terminarz round-robin (mecz i rewanz) dla parzystej liczby druzyn. </p>
+<p>Gwarantuje, ze kazda para druzyn spotyka sie dokladnie dwa razy (u siebie i na wyjezdzie), a kazda druzyna rozgrywa 2*(n-1) meczow. </p>
+
+</div>
+</div>
+<a id="a1b6607c4cd84a96fb037e4b0645ed549" name="a1b6607c4cd84a96fb037e4b0645ed549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6607c4cd84a96fb037e4b0645ed549">&#9670;&#160;</a></span>getCurrentMatchday()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LeagueEngine::getCurrentMatchday </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Numer aktualnej kolejki (1-based logicznie, wewnetrznie liczony od 0). </dd></dl>
+
+</div>
+</div>
+<a id="aa56fdfcab34b7905627fc17be809646d" name="aa56fdfcab34b7905627fc17be809646d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56fdfcab34b7905627fc17be809646d">&#9670;&#160;</a></span>getPlayerTeam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; LeagueEngine::getPlayerTeam </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Wskaznik na druzyne gracza. </dd></dl>
+
+</div>
+</div>
+<a id="ad7317c3339056955762ef8a653c94ce5" name="ad7317c3339056955762ef8a653c94ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7317c3339056955762ef8a653c94ce5">&#9670;&#160;</a></span>getRandomnessPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LeagueEngine::getRandomnessPercent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualny poziom losowosci symulacji. </dd></dl>
+
+</div>
+</div>
+<a id="a77f910cfb55279275503a541dc2dec9e" name="a77f910cfb55279275503a541dc2dec9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f910cfb55279275503a541dc2dec9e">&#9670;&#160;</a></span>getSchedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp; LeagueEngine::getSchedule </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Terminarz w podziale na kolejki. </dd></dl>
+
+</div>
+</div>
+<a id="ae0b79bbee14ffb9adda6a17a9c347749" name="ae0b79bbee14ffb9adda6a17a9c347749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b79bbee14ffb9adda6a17a9c347749">&#9670;&#160;</a></span>getTeams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &gt; &amp; LeagueEngine::getTeams </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Lista druzyn ligi. </dd></dl>
+
+</div>
+</div>
+<a id="af048a0c15070a6131f6365b93462df75" name="af048a0c15070a6131f6365b93462df75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af048a0c15070a6131f6365b93462df75">&#9670;&#160;</a></span>getTotalMatchdays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LeagueEngine::getTotalMatchdays </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba wszystkich kolejek. </dd></dl>
+
+</div>
+</div>
+<a id="adbb61a7f3427cb0d1f41a89411da9389" name="adbb61a7f3427cb0d1f41a89411da9389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb61a7f3427cb0d1f41a89411da9389">&#9670;&#160;</a></span>isLeagueFinished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LeagueEngine::isLeagueFinished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>true, gdy wszystkie kolejki sa rozegrane. </dd></dl>
+
+</div>
+</div>
+<a id="ae8b9d57aeb6f52562effcdd0357f42f9" name="ae8b9d57aeb6f52562effcdd0357f42f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b9d57aeb6f52562effcdd0357f42f9">&#9670;&#160;</a></span>setPlayerTeam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::setPlayerTeam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>teamName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia druzyne gracza po nazwie. </p>
+
+</div>
+</div>
+<a id="a649008c778b0bdd5f409405cdd769b7d" name="a649008c778b0bdd5f409405cdd769b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649008c778b0bdd5f409405cdd769b7d">&#9670;&#160;</a></span>setRandomnessPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::setRandomnessPercent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia poziom losowosci symulacji (0-100). </p>
+
+</div>
+</div>
+<a id="ace45c4fdbdf56861cb8a714992838657" name="ace45c4fdbdf56861cb8a714992838657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace45c4fdbdf56861cb8a714992838657">&#9670;&#160;</a></span>simulateNextMatchday()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::simulateNextMatchday </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Symuluje nastepna kolejke. </p>
+
+</div>
+</div>
+<a id="a5883c9f519acd5457e7989063ec4384a" name="a5883c9f519acd5457e7989063ec4384a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5883c9f519acd5457e7989063ec4384a">&#9670;&#160;</a></span>sortTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeagueEngine::sortTable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortuje tabele ligowa wedlug punktow i bilansu. </p>
+
+</div>
+</div>
+<a id="aad7813e1721ac6fd24063084d9fd1f09" name="aad7813e1721ac6fd24063084d9fd1f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7813e1721ac6fd24063084d9fd1f09">&#9670;&#160;</a></span>transferPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LeagueEngine::transferPlayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fromTeamName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>toTeamName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>playerName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>playerSurname</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Przeprowadza transfer zawodnika miedzy klubami. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>true, jesli transfer zakonczyl sie sukcesem. </dd></dl>
+
+</div>
+</div>
+<a id="a7747555a04cc57ff874aae08affeac96" name="a7747555a04cc57ff874aae08affeac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7747555a04cc57ff874aae08affeac96">&#9670;&#160;</a></span>updateMatchSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LeagueEngine::updateMatchSlot </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>matchdayIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>matchIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newSlot</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktualizuje slot weekendowy pojedynczego meczu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matchdayIndex</td><td>Indeks kolejki (0-based). </td></tr>
+    <tr><td class="paramname">matchIndex</td><td>Indeks meczu w kolejce (0-based). </td></tr>
+    <tr><td class="paramname">newSlot</td><td>Nowy opis terminu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true, jesli slot zostal zmieniony. </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>core/headers/<a class="el" href="_league_engine_8h_source.html">LeagueEngine.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_league_engine.html">LeagueEngine</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

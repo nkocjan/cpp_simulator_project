@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['add_0',['add',['../class_statistic.html#a6f0e376fcc66d49767379cd01c5238be',1,'Statistic']]],
+  ['addassist_1',['addAssist',['../class_player.html#ac36ad25d1838012f9b36e4a673ded711',1,'Player']]],
+  ['adddraw_2',['addDraw',['../class_team.html#a83da2bcdf00aef61f544a334ee6aff3c',1,'Team']]],
+  ['addgoal_3',['addGoal',['../class_player.html#aeb7511c2ce59b3684ab504d81c720b78',1,'Player']]],
+  ['addgoalconceded_4',['addGoalConceded',['../class_team.html#a20dab5a033c8beeebf2814a72bebd0fc',1,'Team']]],
+  ['addgoalscored_5',['addGoalScored',['../class_team.html#acdf11dfeed8edf1bbc1a295145360b03',1,'Team']]],
+  ['addloss_6',['addLoss',['../class_team.html#ab38b66fc15c542450ccb0a03995f4162',1,'Team']]],
+  ['addmatch_7',['addMatch',['../class_team.html#aee3f6cd35b0b7f11d5ccebafce56e11f',1,'Team']]],
+  ['addminutesplayed_8',['addMinutesPlayed',['../class_player.html#a20d9270be6374829dd4eb6145e93d2fa',1,'Player']]],
+  ['addplayer_9',['addPlayer',['../class_team.html#acad9fa8ebd4df972421e452a2c49abc2',1,'Team']]],
+  ['addpoints_10',['addPoints',['../class_team.html#a4acc1c3077c7e08636dfcef359e7242f',1,'Team']]],
+  ['addredcard_11',['addRedCard',['../class_player.html#ab931c4fd50e58c2019b51b15b7d17157',1,'Player']]],
+  ['addteam_12',['addTeam',['../class_league_engine.html#a3777b6f294b255ea6e556e9894d3342a',1,'LeagueEngine']]],
+  ['addwin_13',['addWin',['../class_team.html#ab0c0c28d3e7d652d0556783e668ce5bf',1,'Team']]],
+  ['addyellowcard_14',['addYellowCard',['../class_player.html#a2abb51186e561e74d17196fcd00d22fc',1,'Player']]],
+  ['adjustmorale_15',['adjustMorale',['../class_player.html#a0e98c0b9350eab5afe031922165de3b9',1,'Player']]],
+  ['assists_16',['assists',['../class_player.html#a6e00a564af6d29e430e5a70c2287d5f9',1,'Player']]]
+];

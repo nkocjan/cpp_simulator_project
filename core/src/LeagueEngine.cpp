@@ -1,11 +1,32 @@
 #include "../headers/LeagueEngine.h"
 #include <algorithm>
-#include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <iostream>
 #include <numeric>
+#include <random>
 
-LeagueEngine::LeagueEngine() : currentMatchday(0) {}
+namespace {
+std::mt19937& scheduleRng() {
+    static std::mt19937 rng(std::random_device{}());
+    return rng;
+}
+
+std::vector<std::string> weekendSlots() {
+    return {
+        "Sobota 12:30",
+        "Sobota 15:00",
+        "Sobota 17:30",
+        "Sobota 20:00",
+        "Niedziela 12:30",
+        "Niedziela 15:00",
+        "Niedziela 17:30",
+        "Niedziela 20:00"
+    };
+}
+}
+
+LeagueEngine::LeagueEngine() : currentMatchday(0), randomnessPercent(50) {}
 
 void LeagueEngine::addTeam(std::shared_ptr<Team> team) {
     if (team) {
@@ -20,7 +41,6 @@ void LeagueEngine::setPlayerTeam(const std::string& teamName) {
             return;
         }
     }
-    // If not found, log warning
     std::cerr << "Drużyna " << teamName << " nie znaleziona w lidze!" << std::endl;
 }
 
@@ -45,7 +65,6 @@ void LeagueEngine::generateSchedule() {
     std::vector<std::vector<std::pair<size_t, size_t>>> firstRoundPairs;
     firstRoundPairs.reserve(n - 1);
 
-    // Pierwsza runda: każda para gra dokładnie raz.
     for (size_t round = 0; round < n - 1; ++round) {
         std::vector<std::pair<size_t, size_t>> pairings;
         pairings.reserve(n / 2);
@@ -54,7 +73,6 @@ void LeagueEngine::generateSchedule() {
             size_t home = rotation[i];
             size_t away = rotation[n - 1 - i];
 
-            // Delikatna kompensacja gospodarza, aby ograniczyć serie dom/wyjazd.
             if (i == 0 && (round % 2 == 1)) {
                 std::swap(home, away);
             }
@@ -63,7 +81,6 @@ void LeagueEngine::generateSchedule() {
 
         firstRoundPairs.push_back(pairings);
 
-        // Rotacja wszystkich poza pierwszą drużyną (circle method).
         const size_t last = rotation.back();
         for (size_t idx = n - 1; idx > 1; --idx) {
             rotation[idx] = rotation[idx - 1];
@@ -71,27 +88,47 @@ void LeagueEngine::generateSchedule() {
         rotation[1] = last;
     }
 
-    // Zapis pierwszej rundy.
     for (const auto &matchdayPairs : firstRoundPairs) {
         std::vector<std::shared_ptr<Match>> matchdayMatches;
         matchdayMatches.reserve(matchdayPairs.size());
         for (const auto &p : matchdayPairs) {
-            matchdayMatches.push_back(std::make_shared<Match>(teams[p.first], teams[p.second]));
+            matchdayMatches.push_back(std::make_shared<Match>(teams[p.first], teams[p.second], randomnessPercent));
         }
+
+        auto slots = weekendSlots();
+        std::shuffle(slots.begin(), slots.end(), scheduleRng());
+        for (size_t i = 0; i < matchdayMatches.size(); ++i) {
+            matchdayMatches[i]->setWeekendSlot(slots[i % slots.size()]);
+        }
+
         schedule.push_back(std::move(matchdayMatches));
     }
 
-    // Rewanże: te same pary, odwrócone role gospodarza/gościa.
     for (const auto &matchdayPairs : firstRoundPairs) {
         std::vector<std::shared_ptr<Match>> matchdayMatches;
         matchdayMatches.reserve(matchdayPairs.size());
         for (const auto &p : matchdayPairs) {
-            matchdayMatches.push_back(std::make_shared<Match>(teams[p.second], teams[p.first]));
+            matchdayMatches.push_back(std::make_shared<Match>(teams[p.second], teams[p.first], randomnessPercent));
         }
+
+        auto slots = weekendSlots();
+        std::shuffle(slots.begin(), slots.end(), scheduleRng());
+        for (size_t i = 0; i < matchdayMatches.size(); ++i) {
+            matchdayMatches[i]->setWeekendSlot(slots[i % slots.size()]);
+        }
+
         schedule.push_back(std::move(matchdayMatches));
     }
 
     std::cout << "Terminarz wygenerowany: " << schedule.size() << " kolejek" << std::endl;
+}
+
+void LeagueEngine::setRandomnessPercent(int value) {
+    randomnessPercent = std::clamp(value, 0, 100);
+}
+
+int LeagueEngine::getRandomnessPercent() const {
+    return randomnessPercent;
 }
 
 void LeagueEngine::simulateNextMatchday() {
@@ -107,18 +144,19 @@ void LeagueEngine::simulateNextMatchday() {
 
     std::cout << "\n=== KOLEJKA " << (currentMatchday + 1) << " ===" << std::endl;
 
-    // Simulate all matches in current matchday
+    for (auto& team : teams) {
+        team->decrementUnavailablePlayers();
+    }
+
     for (auto& match : schedule[currentMatchday]) {
         match->simulate();
 
-        // Display match result
         std::cout << match->getMatchEvents()[0] << std::endl;
         if (!match->getMatchEvents().empty()) {
             std::cout << match->getMatchEvents().back() << std::endl;
         }
     }
 
-    // Increment matchday counter
     currentMatchday++;
 
     std::cout << "Kolejka " << currentMatchday << " zakończona." << std::endl;
@@ -131,17 +169,14 @@ bool LeagueEngine::isLeagueFinished() const {
 void LeagueEngine::sortTable() {
     std::sort(teams.begin(), teams.end(),
         [](const std::shared_ptr<Team>& a, const std::shared_ptr<Team>& b) {
-            // Sort by points descending
             if (a->getPoints() != b->getPoints()) {
                 return a->getPoints() > b->getPoints();
             }
-            // If points are equal, sort by goal difference descending
             int diffA = a->getGoalsScored() - a->getGoalsConceded();
             int diffB = b->getGoalsScored() - b->getGoalsConceded();
             if (diffA != diffB) {
                 return diffA > diffB;
             }
-            // If goal difference is equal, sort by goals scored descending
             return a->getGoalsScored() > b->getGoalsScored();
         });
 }
@@ -179,13 +214,11 @@ void LeagueEngine::exportToFile(const std::string& filename) const {
         return;
     }
 
-    // Write header
     outFile << "================================ TABELA LIGOWA ================================" << std::endl;
     outFile << "Kolejka: " << currentMatchday << " / " << schedule.size() << std::endl;
     outFile << "Data: 2026-03-16" << std::endl;
     outFile << std::endl;
 
-    // Write table
     outFile << "Poz │ Drużyna              │  Pkt │ M  │ W  │ R  │ P  │ +  │ -  │ Różnica" << std::endl;
     outFile << "────┼────────────────────┼──────┼────┼────┼────┼────┼────┼────┼────────" << std::endl;
 
@@ -209,7 +242,6 @@ void LeagueEngine::exportToFile(const std::string& filename) const {
     outFile << "================================ HISTORIA MECZÓW ================================" << std::endl;
     outFile << std::endl;
 
-    // Write match history
     int matchdayNum = 1;
     for (const auto& matchday : schedule) {
         outFile << "--- KOLEJKA " << matchdayNum << " ---" << std::endl;
@@ -217,13 +249,11 @@ void LeagueEngine::exportToFile(const std::string& filename) const {
         for (const auto& match : matchday) {
             const auto& events = match->getMatchEvents();
             if (!events.empty()) {
-                // Write match info
                 outFile << match->getMatchEvents()[0] << std::endl;
                 if (events.size() > 1) {
                     outFile << "Wynik: " << match->getHomeGoals() << " - " << match->getAwayGoals() << std::endl;
                 }
 
-                // Write match events
                 for (size_t i = 1; i < events.size(); ++i) {
                     outFile << "  • " << events[i] << std::endl;
                 }
@@ -257,6 +287,68 @@ int LeagueEngine::getCurrentMatchday() const {
 }
 
 int LeagueEngine::getTotalMatchdays() const {
-    return schedule.size();
+    return static_cast<int>(schedule.size());
 }
 
+bool LeagueEngine::updateMatchSlot(size_t matchdayIndex, size_t matchIndex, const std::string& newSlot) {
+    if (matchdayIndex >= schedule.size()) {
+        return false;
+    }
+    if (matchIndex >= schedule[matchdayIndex].size()) {
+        return false;
+    }
+
+    return schedule[matchdayIndex][matchIndex]->setWeekendSlot(newSlot);
+}
+
+bool LeagueEngine::transferPlayer(const std::string& fromTeamName,
+                                  const std::string& toTeamName,
+                                  const std::string& playerName,
+                                  const std::string& playerSurname) {
+    if (fromTeamName == toTeamName) {
+        return false;
+    }
+
+    std::shared_ptr<Team> fromTeam;
+    std::shared_ptr<Team> toTeam;
+
+    for (const auto& team : teams) {
+        if (team->getName() == fromTeamName) {
+            fromTeam = team;
+        }
+        if (team->getName() == toTeamName) {
+            toTeam = team;
+        }
+    }
+
+    if (!fromTeam || !toTeam) {
+        return false;
+    }
+
+    std::shared_ptr<Player> playerToTransfer;
+    for (const auto& player : fromTeam->getPlayers()) {
+        if (player->getName() == playerName && player->getSurname() == playerSurname) {
+            playerToTransfer = player;
+            break;
+        }
+    }
+
+    if (!playerToTransfer) {
+        return false;
+    }
+
+    if (!fromTeam->removePlayer(playerToTransfer)) {
+        return false;
+    }
+
+    toTeam->addPlayer(playerToTransfer);
+
+    fromTeam->setDefaultLineup();
+    toTeam->setDefaultLineup();
+
+    if (playerTeam == fromTeam || playerTeam == toTeam) {
+        setPlayerTeam(playerTeam->getName());
+    }
+
+    return true;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Plik źródłowy core/headers/LeagueEngine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_league_engine_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LeagueEngine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_league_engine_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FIFA26_SIMULATOR_LEAGUEENGINE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FIFA26_SIMULATOR_LEAGUEENGINE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_team_8h.html">Team.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_match_8h.html">Match.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_league_engine.html">   18</a></span><span class="keyword">class </span><a class="code hl_function" href="class_league_engine.html#a0822ac3fba5e80efc20c6c2d4eb09ac1">LeagueEngine</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;std::shared_ptr&lt;Team&gt;&gt; teams;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::shared_ptr&lt;Team&gt; playerTeam;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;std::vector&lt;std::shared_ptr&lt;Match&gt;&gt;&gt; schedule;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">int</span> currentMatchday;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> randomnessPercent;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_league_engine.html#a0822ac3fba5e80efc20c6c2d4eb09ac1">   28</a></span>    <a class="code hl_function" href="class_league_engine.html#a0822ac3fba5e80efc20c6c2d4eb09ac1">LeagueEngine</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_league_engine.html#a3777b6f294b255ea6e556e9894d3342a">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#a3777b6f294b255ea6e556e9894d3342a">addTeam</a>(std::shared_ptr&lt;Team&gt; team);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_league_engine.html#ae8b9d57aeb6f52562effcdd0357f42f9">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#ae8b9d57aeb6f52562effcdd0357f42f9">setPlayerTeam</a>(<span class="keyword">const</span> std::string&amp; teamName);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_league_engine.html#af246556316522e9511c85adc671ea3c3">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#af246556316522e9511c85adc671ea3c3">generateSchedule</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_league_engine.html#a649008c778b0bdd5f409405cdd769b7d">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#a649008c778b0bdd5f409405cdd769b7d">setRandomnessPercent</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_league_engine.html#ad7317c3339056955762ef8a653c94ce5">   45</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_league_engine.html#ad7317c3339056955762ef8a653c94ce5">getRandomnessPercent</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_league_engine.html#ace45c4fdbdf56861cb8a714992838657">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#ace45c4fdbdf56861cb8a714992838657">simulateNextMatchday</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_league_engine.html#adbb61a7f3427cb0d1f41a89411da9389">   50</a></span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_league_engine.html#adbb61a7f3427cb0d1f41a89411da9389">isLeagueFinished</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_league_engine.html#a5883c9f519acd5457e7989063ec4384a">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#a5883c9f519acd5457e7989063ec4384a">sortTable</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_league_engine.html#a3f5249497e55a1f10e2d05edfabd4c58">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#a3f5249497e55a1f10e2d05edfabd4c58">displayTable</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_league_engine.html#a8b53f1f9725fc8bb28a5d93c5fd3250b">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_league_engine.html#a8b53f1f9725fc8bb28a5d93c5fd3250b">exportToFile</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_league_engine.html#ae0b79bbee14ffb9adda6a17a9c347749">   60</a></span>    [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::shared_ptr&lt;Team&gt;&gt;&amp; <a class="code hl_function" href="class_league_engine.html#ae0b79bbee14ffb9adda6a17a9c347749">getTeams</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_league_engine.html#aa56fdfcab34b7905627fc17be809646d">   62</a></span>    [[nodiscard]] std::shared_ptr&lt;Team&gt; <a class="code hl_function" href="class_league_engine.html#aa56fdfcab34b7905627fc17be809646d">getPlayerTeam</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_league_engine.html#a77f910cfb55279275503a541dc2dec9e">   64</a></span>    [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::vector&lt;std::shared_ptr&lt;Match&gt;&gt;&gt;&amp; <a class="code hl_function" href="class_league_engine.html#a77f910cfb55279275503a541dc2dec9e">getSchedule</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_league_engine.html#a1b6607c4cd84a96fb037e4b0645ed549">   66</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_league_engine.html#a1b6607c4cd84a96fb037e4b0645ed549">getCurrentMatchday</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_league_engine.html#af048a0c15070a6131f6365b93462df75">   68</a></span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_league_engine.html#af048a0c15070a6131f6365b93462df75">getTotalMatchdays</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_league_engine.html#a7747555a04cc57ff874aae08affeac96">   77</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_league_engine.html#a7747555a04cc57ff874aae08affeac96">updateMatchSlot</a>(<span class="keywordtype">size_t</span> matchdayIndex, <span class="keywordtype">size_t</span> matchIndex, <span class="keyword">const</span> std::string&amp; newSlot);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_league_engine.html#aad7813e1721ac6fd24063084d9fd1f09">   83</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_league_engine.html#aad7813e1721ac6fd24063084d9fd1f09">transferPlayer</a>(<span class="keyword">const</span> std::string&amp; fromTeamName,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                        <span class="keyword">const</span> std::string&amp; toTeamName,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                        <span class="keyword">const</span> std::string&amp; playerName,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        <span class="keyword">const</span> std::string&amp; playerSurname);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_match_8h_html"><div class="ttname"><a href="_match_8h.html">Match.h</a></div><div class="ttdoc">Deklaracja klasy pojedynczego meczu.</div></div>
+<div class="ttc" id="a_team_8h_html"><div class="ttname"><a href="_team_8h.html">Team.h</a></div><div class="ttdoc">Deklaracja klasy druzyny.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a0822ac3fba5e80efc20c6c2d4eb09ac1"><div class="ttname"><a href="class_league_engine.html#a0822ac3fba5e80efc20c6c2d4eb09ac1">LeagueEngine::LeagueEngine</a></div><div class="ttdeci">LeagueEngine()</div><div class="ttdoc">Tworzy pusty silnik ligi.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a1b6607c4cd84a96fb037e4b0645ed549"><div class="ttname"><a href="class_league_engine.html#a1b6607c4cd84a96fb037e4b0645ed549">LeagueEngine::getCurrentMatchday</a></div><div class="ttdeci">int getCurrentMatchday() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_a3777b6f294b255ea6e556e9894d3342a"><div class="ttname"><a href="class_league_engine.html#a3777b6f294b255ea6e556e9894d3342a">LeagueEngine::addTeam</a></div><div class="ttdeci">void addTeam(std::shared_ptr&lt; Team &gt; team)</div><div class="ttdoc">Dodaje druzyne do ligi.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a3f5249497e55a1f10e2d05edfabd4c58"><div class="ttname"><a href="class_league_engine.html#a3f5249497e55a1f10e2d05edfabd4c58">LeagueEngine::displayTable</a></div><div class="ttdeci">void displayTable() const</div><div class="ttdoc">Wypisuje tabele do konsoli.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a5883c9f519acd5457e7989063ec4384a"><div class="ttname"><a href="class_league_engine.html#a5883c9f519acd5457e7989063ec4384a">LeagueEngine::sortTable</a></div><div class="ttdeci">void sortTable()</div><div class="ttdoc">Sortuje tabele ligowa wedlug punktow i bilansu.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a649008c778b0bdd5f409405cdd769b7d"><div class="ttname"><a href="class_league_engine.html#a649008c778b0bdd5f409405cdd769b7d">LeagueEngine::setRandomnessPercent</a></div><div class="ttdeci">void setRandomnessPercent(int value)</div><div class="ttdoc">Ustawia poziom losowosci symulacji (0-100).</div></div>
+<div class="ttc" id="aclass_league_engine_html_a7747555a04cc57ff874aae08affeac96"><div class="ttname"><a href="class_league_engine.html#a7747555a04cc57ff874aae08affeac96">LeagueEngine::updateMatchSlot</a></div><div class="ttdeci">bool updateMatchSlot(size_t matchdayIndex, size_t matchIndex, const std::string &amp;newSlot)</div><div class="ttdoc">Aktualizuje slot weekendowy pojedynczego meczu.</div></div>
+<div class="ttc" id="aclass_league_engine_html_a77f910cfb55279275503a541dc2dec9e"><div class="ttname"><a href="class_league_engine.html#a77f910cfb55279275503a541dc2dec9e">LeagueEngine::getSchedule</a></div><div class="ttdeci">const std::vector&lt; std::vector&lt; std::shared_ptr&lt; Match &gt; &gt; &gt; &amp; getSchedule() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_a8b53f1f9725fc8bb28a5d93c5fd3250b"><div class="ttname"><a href="class_league_engine.html#a8b53f1f9725fc8bb28a5d93c5fd3250b">LeagueEngine::exportToFile</a></div><div class="ttdeci">void exportToFile(const std::string &amp;filename) const</div><div class="ttdoc">Eksportuje tabele i historie meczow do pliku.</div></div>
+<div class="ttc" id="aclass_league_engine_html_aa56fdfcab34b7905627fc17be809646d"><div class="ttname"><a href="class_league_engine.html#aa56fdfcab34b7905627fc17be809646d">LeagueEngine::getPlayerTeam</a></div><div class="ttdeci">std::shared_ptr&lt; Team &gt; getPlayerTeam() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_aad7813e1721ac6fd24063084d9fd1f09"><div class="ttname"><a href="class_league_engine.html#aad7813e1721ac6fd24063084d9fd1f09">LeagueEngine::transferPlayer</a></div><div class="ttdeci">bool transferPlayer(const std::string &amp;fromTeamName, const std::string &amp;toTeamName, const std::string &amp;playerName, const std::string &amp;playerSurname)</div><div class="ttdoc">Przeprowadza transfer zawodnika miedzy klubami.</div></div>
+<div class="ttc" id="aclass_league_engine_html_ace45c4fdbdf56861cb8a714992838657"><div class="ttname"><a href="class_league_engine.html#ace45c4fdbdf56861cb8a714992838657">LeagueEngine::simulateNextMatchday</a></div><div class="ttdeci">void simulateNextMatchday()</div><div class="ttdoc">Symuluje nastepna kolejke.</div></div>
+<div class="ttc" id="aclass_league_engine_html_ad7317c3339056955762ef8a653c94ce5"><div class="ttname"><a href="class_league_engine.html#ad7317c3339056955762ef8a653c94ce5">LeagueEngine::getRandomnessPercent</a></div><div class="ttdeci">int getRandomnessPercent() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_adbb61a7f3427cb0d1f41a89411da9389"><div class="ttname"><a href="class_league_engine.html#adbb61a7f3427cb0d1f41a89411da9389">LeagueEngine::isLeagueFinished</a></div><div class="ttdeci">bool isLeagueFinished() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_ae0b79bbee14ffb9adda6a17a9c347749"><div class="ttname"><a href="class_league_engine.html#ae0b79bbee14ffb9adda6a17a9c347749">LeagueEngine::getTeams</a></div><div class="ttdeci">const std::vector&lt; std::shared_ptr&lt; Team &gt; &gt; &amp; getTeams() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_ae8b9d57aeb6f52562effcdd0357f42f9"><div class="ttname"><a href="class_league_engine.html#ae8b9d57aeb6f52562effcdd0357f42f9">LeagueEngine::setPlayerTeam</a></div><div class="ttdeci">void setPlayerTeam(const std::string &amp;teamName)</div><div class="ttdoc">Ustawia druzyne gracza po nazwie.</div></div>
+<div class="ttc" id="aclass_league_engine_html_af048a0c15070a6131f6365b93462df75"><div class="ttname"><a href="class_league_engine.html#af048a0c15070a6131f6365b93462df75">LeagueEngine::getTotalMatchdays</a></div><div class="ttdeci">int getTotalMatchdays() const</div></div>
+<div class="ttc" id="aclass_league_engine_html_af246556316522e9511c85adc671ea3c3"><div class="ttname"><a href="class_league_engine.html#af246556316522e9511c85adc671ea3c3">LeagueEngine::generateSchedule</a></div><div class="ttdeci">void generateSchedule()</div><div class="ttdoc">Generuje terminarz round-robin (mecz i rewanz) dla parzystej liczby druzyn.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a href="dir_0818fd898c1851fdc96671eb0464d558.html">headers</a></li><li class="navelem"><a href="_league_engine_8h.html">LeagueEngine.h</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

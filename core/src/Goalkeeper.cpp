@@ -9,6 +9,10 @@ double Goalkeeper::calculateGoalChance() const {
     return (overall.getValue() * 0.7) + (defendingSkills.getValue() * 0.3) * (condition.getValue() / 100.0);
 }
 
+PlayerPosition Goalkeeper::getNaturalPosition() const {
+    return PlayerPosition::Goalkeeper;
+}
+
 int Goalkeeper::getDefendingSkills() const {
     return defendingSkills.getValue();
 }

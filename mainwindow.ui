@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>960</width>
-    <height>640</height>
+    <width>1040</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,33 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="topBarLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="abortSimulationButton">
+        <property name="text">
+         <string>Przerwij symulacje</string>
+        </property>
+        <property name="visible">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <widget class="QGroupBox" name="configGroupBox">
       <property name="title">
@@ -34,41 +61,78 @@
        <item row="1" column="0">
         <widget class="QLabel" name="teamsCountLabel">
          <property name="text">
-          <string>Liczba druzyn:</string>
+          <string>Liczba druzyn (parzysta):</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
         <widget class="QSpinBox" name="teamsCountSpinBox">
          <property name="minimum">
-          <number>4</number>
+          <number>2</number>
          </property>
          <property name="maximum">
-          <number>8</number>
+          <number>32</number>
          </property>
          <property name="singleStep">
           <number>2</number>
          </property>
+         <property name="value">
+          <number>4</number>
+         </property>
         </widget>
        </item>
        <item row="2" column="0">
+        <widget class="QLabel" name="teamsPoolLabel">
+         <property name="text">
+          <string>Wybierz druzyny z puli:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QListWidget" name="teamsPoolList">
+         <property name="minimumHeight">
+          <number>140</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
         <widget class="QLabel" name="playerTeamLabel">
          <property name="text">
           <string>Moja druzyna:</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QComboBox" name="playerTeamComboBox"/>
        </item>
-       <item row="3" column="0" colspan="2">
+       <item row="4" column="0">
+        <widget class="QLabel" name="randomnessLabel">
+         <property name="text">
+          <string>Losowosc symulacji (0-100):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="randomnessSpinBox">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
         <widget class="QPushButton" name="prepareLeagueButton">
          <property name="text">
           <string>Przygotuj lige</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="0" colspan="2">
+       <item row="6" column="0" colspan="2">
         <widget class="QLabel" name="setupStatusLabel">
          <property name="wordWrap">
           <bool>true</bool>
@@ -101,7 +165,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>960</width>
+     <width>1040</width>
      <height>25</height>
     </rect>
    </property>

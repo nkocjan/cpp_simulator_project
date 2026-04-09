@@ -70,6 +70,8 @@ set(GUI_SOURCES
         gui/MatchScheduleWidget.cpp
         gui/TeamDetailsWidget.h
         gui/TeamDetailsWidget.cpp
+        gui/PlayerDetailsWidget.h
+        gui/PlayerDetailsWidget.cpp
 )
 
 qt_add_executable(Fifa26_Simulator

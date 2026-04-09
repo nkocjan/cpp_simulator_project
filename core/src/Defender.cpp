@@ -9,6 +9,10 @@ double Defender::calculateGoalChance() const {
     return (overall.getValue() * 0.6) + (defendingSkills.getValue() * 0.4) * (condition.getValue() / 100.0);
 }
 
+PlayerPosition Defender::getNaturalPosition() const {
+    return PlayerPosition::Defender;
+}
+
 int Defender::getDefendingSkills() const {
     return defendingSkills.getValue();
 }

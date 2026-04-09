@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['injuryduration_0',['injuryDuration',['../class_player.html#a8a59943e0b2d582c41c1c14854ebb2f0',1,'Player']]],
+  ['isavailable_1',['isAvailable',['../class_player.html#af24fccfed489e06626b83c7d7f25c9de',1,'Player']]],
+  ['isleaguefinished_2',['isLeagueFinished',['../class_league_engine.html#adbb61a7f3427cb0d1f41a89411da9389',1,'LeagueEngine']]]
+];

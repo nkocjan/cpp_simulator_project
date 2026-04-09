@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja klasy TeamDetailsWidget</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_team_details_widget.html','','class_team_details_widget-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy TeamDetailsWidget</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Widget prezentujacy sklad i statystyki druzyny.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_team_details_widget_8h_source.html">TeamDetailsWidget.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla TeamDetailsWidget</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_team_details_widget.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:a4c34c20cc03ddcdbb41d2a47f13f8782" id="r_a4c34c20cc03ddcdbb41d2a47f13f8782"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c34c20cc03ddcdbb41d2a47f13f8782">lineupEdited</a> ()</td></tr>
+<tr class="memdesc:a4c34c20cc03ddcdbb41d2a47f13f8782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitowany po ręcznej zmianie składu wyjściowego.  <br /></td></tr>
+<tr class="memitem:ab62738642c9b2c3649ccd52896d1b6ea" id="r_ab62738642c9b2c3649ccd52896d1b6ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab62738642c9b2c3649ccd52896d1b6ea">playerSelectedRequested</a> (const QString &amp;teamName, int playerIndex)</td></tr>
+<tr class="memdesc:ab62738642c9b2c3649ccd52896d1b6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prosba o pokazanie szczegolow wybranego zawodnika.  <br /></td></tr>
+<tr class="memitem:aee4a61a37c58f5c3b51627c25b741eee" id="r_aee4a61a37c58f5c3b51627c25b741eee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee4a61a37c58f5c3b51627c25b741eee">transferRequested</a> (const QString &amp;fromTeam, const QString &amp;toTeam, const QString &amp;playerName, const QString &amp;playerSurname)</td></tr>
+<tr class="memdesc:aee4a61a37c58f5c3b51627c25b741eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prosba o transfer zawodnika miedzy klubami.  <br /></td></tr>
+<tr class="memitem:a8505aecedb1a97b68feb78a1e9e868a4" id="r_a8505aecedb1a97b68feb78a1e9e868a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8505aecedb1a97b68feb78a1e9e868a4">phaseAdvanceRequested</a> ()</td></tr>
+<tr class="memdesc:a8505aecedb1a97b68feb78a1e9e868a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sygnał do przejścia do następnego etapu przygotowania.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a03b869a288966d5767162dc7ee91edfd" id="r_a03b869a288966d5767162dc7ee91edfd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a03b869a288966d5767162dc7ee91edfd">TeamDetailsWidget</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a03b869a288966d5767162dc7ee91edfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy widget szczegolow druzyny.  <br /></td></tr>
+<tr class="memitem:a85d788670adaea4a0933ecbc4f24e9d6" id="r_a85d788670adaea4a0933ecbc4f24e9d6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a85d788670adaea4a0933ecbc4f24e9d6">refreshData</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &gt; &amp;teams, const std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &amp;preferredTeam, const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp;schedule)</td></tr>
+<tr class="memdesc:a85d788670adaea4a0933ecbc4f24e9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odswieza caly widok na podstawie danych ligi.  <br /></td></tr>
+<tr class="memitem:a56fe102a1f38359d9861a724efaa85c2" id="r_a56fe102a1f38359d9861a724efaa85c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a56fe102a1f38359d9861a724efaa85c2">selectTeamByName</a> (const QString &amp;teamName)</td></tr>
+<tr class="memdesc:a56fe102a1f38359d9861a724efaa85c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia aktywna druzyne po nazwie.  <br /></td></tr>
+<tr class="memitem:aa43caadf945811f1edf5d9414074bf4b" id="r_aa43caadf945811f1edf5d9414074bf4b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa43caadf945811f1edf5d9414074bf4b">setTransferEditorEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:aa43caadf945811f1edf5d9414074bf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Globalnie wlacza lub blokuje sekcje transferow.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Widget prezentujacy sklad i statystyki druzyny. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a03b869a288966d5767162dc7ee91edfd" name="a03b869a288966d5767162dc7ee91edfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b869a288966d5767162dc7ee91edfd">&#9670;&#160;</a></span>TeamDetailsWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TeamDetailsWidget::TeamDetailsWidget </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tworzy widget szczegolow druzyny. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a4c34c20cc03ddcdbb41d2a47f13f8782" name="a4c34c20cc03ddcdbb41d2a47f13f8782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c34c20cc03ddcdbb41d2a47f13f8782">&#9670;&#160;</a></span>lineupEdited</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::lineupEdited </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emitowany po ręcznej zmianie składu wyjściowego. </p>
+
+</div>
+</div>
+<a id="a8505aecedb1a97b68feb78a1e9e868a4" name="a8505aecedb1a97b68feb78a1e9e868a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8505aecedb1a97b68feb78a1e9e868a4">&#9670;&#160;</a></span>phaseAdvanceRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::phaseAdvanceRequested </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sygnał do przejścia do następnego etapu przygotowania. </p>
+
+</div>
+</div>
+<a id="ab62738642c9b2c3649ccd52896d1b6ea" name="ab62738642c9b2c3649ccd52896d1b6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62738642c9b2c3649ccd52896d1b6ea">&#9670;&#160;</a></span>playerSelectedRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::playerSelectedRequested </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>teamName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>playerIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prosba o pokazanie szczegolow wybranego zawodnika. </p>
+
+</div>
+</div>
+<a id="a85d788670adaea4a0933ecbc4f24e9d6" name="a85d788670adaea4a0933ecbc4f24e9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d788670adaea4a0933ecbc4f24e9d6">&#9670;&#160;</a></span>refreshData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::refreshData </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>teams</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_team.html">Team</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>preferredTeam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>schedule</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odswieza caly widok na podstawie danych ligi. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">teams</td><td>Lista druzyn. </td></tr>
+    <tr><td class="paramname">preferredTeam</td><td>Domyslnie wskazana druzyna. </td></tr>
+    <tr><td class="paramname">schedule</td><td>Terminarz meczow. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56fe102a1f38359d9861a724efaa85c2" name="a56fe102a1f38359d9861a724efaa85c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fe102a1f38359d9861a724efaa85c2">&#9670;&#160;</a></span>selectTeamByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::selectTeamByName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>teamName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia aktywna druzyne po nazwie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">teamName</td><td>Nazwa druzyny do zaznaczenia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa43caadf945811f1edf5d9414074bf4b" name="aa43caadf945811f1edf5d9414074bf4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43caadf945811f1edf5d9414074bf4b">&#9670;&#160;</a></span>setTransferEditorEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::setTransferEditorEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Globalnie wlacza lub blokuje sekcje transferow. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true - edycja aktywna, false - edycja zablokowana. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee4a61a37c58f5c3b51627c25b741eee" name="aee4a61a37c58f5c3b51627c25b741eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4a61a37c58f5c3b51627c25b741eee">&#9670;&#160;</a></span>transferRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TeamDetailsWidget::transferRequested </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>fromTeam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>toTeam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>playerName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>playerSurname</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prosba o transfer zawodnika miedzy klubami. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>gui/<a class="el" href="_team_details_widget_8h_source.html">TeamDetailsWidget.h</a></li>
+<li>gui/<a class="el" href="_team_details_widget_8cpp.html">TeamDetailsWidget.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_team_details_widget.html">TeamDetailsWidget</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

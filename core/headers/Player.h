@@ -7,11 +7,18 @@
  * @brief Deklaracja abstrakcyjnej klasy bazowej pilkarza.
  */
 
+/** @brief Podstawowe pozycje boiskowe obslugiwane w symulacji. */
+enum class PlayerPosition {
+    Goalkeeper,
+    Defender,
+    Midfielder,
+    Striker
+};
+
 /**
  * @brief Bazowa klasa reprezentujaca pilkarza.
  *
- * Klasa przechowuje dane osobowe oraz zestaw statystyk indywidualnych.
- * Klasy pochodne definiuja szczegolowa logike @ref calculateGoalChance.
+ * Klasa przechowuje dane osobowe, statystyki oraz status dostepnosci.
  */
 class Player {
 protected:
@@ -28,6 +35,7 @@ protected:
     Statistic<double> morale;
 
     int injuryDuration;
+    int suspensionDuration;
 
 public:
     /**
@@ -42,10 +50,12 @@ public:
     virtual ~Player() = default;
 
     /**
-     * @brief Oblicza szanse udanej akcji ofensywnej.
+     * @brief Oblicza szanse udanej akcji ofensywnej dla roli zawodnika.
      * @return Wskaznik szansy wyliczony dla danej pozycji.
      */
     virtual double calculateGoalChance() const = 0;
+    /** @return Naturalna pozycja zawodnika. */
+    virtual PlayerPosition getNaturalPosition() const = 0;
 
     /** @return Imie pilkarza. */
     std::string getName() const;
@@ -68,8 +78,13 @@ public:
      int getMinutesPlayed() const;
     /** @return Aktualne morale. */
      double getMorale() const;
-    /** @return Liczba kolejek pauzy. */
+    /** @return Liczba kolejek pauzy z powodu kontuzji. */
      int getInjuryDuration() const;
+    /** @return Liczba kolejek pauzy z powodu zawieszenia. */
+     int getSuspensionDuration() const;
+
+    /** @return true, jezeli zawodnik moze zagrac w najblizszym meczu. */
+    bool isAvailable() const;
 
     /** @brief Ustawia kondycje. */
     void setCondition(double value);
@@ -87,8 +102,16 @@ public:
     void addMinutesPlayed(int minutes);
     /** @brief Ustawia morale. */
     void setMorale(double value);
-    /** @brief Ustawia liczbe kolejek pauzy. */
+    /** @brief Zmienia morale o delta (z klamrowaniem do zakresu). */
+    void adjustMorale(double delta);
+    /** @brief Ustawia liczbe kolejek pauzy z powodu kontuzji. */
     void setInjuryDuration(int duration);
+    /** @brief Ustawia liczbe kolejek pauzy z powodu zawieszenia. */
+    void setSuspensionDuration(int duration);
+    /** @brief Decrementuje liczbe kolejek pauzy z powodu kontuzji. */
+    void decrementInjuryDuration();
+    /** @brief Decrementuje liczbe kolejek pauzy z powodu zawieszenia. */
+    void decrementSuspensionDuration();
 
     /** @return Referencja do obiektu statystyki kondycji. */
     Statistic<double>& getConditionStat() { return condition; }

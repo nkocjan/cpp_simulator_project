@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja klasy MatchScheduleWidget</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_match_schedule_widget.html','','class_match_schedule_widget-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy MatchScheduleWidget</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Widget prezentujacy terminarz ligi.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_match_schedule_widget_8h_source.html">MatchScheduleWidget.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla MatchScheduleWidget</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_match_schedule_widget.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:aeece64d0ec57ef21f38fd265529acb60" id="r_aeece64d0ec57ef21f38fd265529acb60"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeece64d0ec57ef21f38fd265529acb60">matchSlotEditRequested</a> (int matchdayIndex, int matchIndex, const QString &amp;newSlot)</td></tr>
+<tr class="memdesc:aeece64d0ec57ef21f38fd265529acb60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prosba o zmiane slotu meczu (tylko nierozegrane).  <br /></td></tr>
+<tr class="memitem:a20baf28ba76cb77645544bf544eadd1b" id="r_a20baf28ba76cb77645544bf544eadd1b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20baf28ba76cb77645544bf544eadd1b">phaseAdvanceRequested</a> ()</td></tr>
+<tr class="memdesc:a20baf28ba76cb77645544bf544eadd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sygnał do przejścia do następnego etapu przygotowania.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a1a34c610e3def4a67488c11369e8c61a" id="r_a1a34c610e3def4a67488c11369e8c61a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1a34c610e3def4a67488c11369e8c61a">MatchScheduleWidget</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a1a34c610e3def4a67488c11369e8c61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy widget terminarza.  <br /></td></tr>
+<tr class="memitem:a12192aed81bc5b6e5284563140a38ee6" id="r_a12192aed81bc5b6e5284563140a38ee6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12192aed81bc5b6e5284563140a38ee6">refreshSchedule</a> (const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp;schedule, int currentMatchday)</td></tr>
+<tr class="memdesc:a12192aed81bc5b6e5284563140a38ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odswieza dane terminarza.  <br /></td></tr>
+<tr class="memitem:aa21f978bafe1bf4257d47aa23433dc48" id="r_aa21f978bafe1bf4257d47aa23433dc48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa21f978bafe1bf4257d47aa23433dc48">setEditingEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:aa21f978bafe1bf4257d47aa23433dc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wlacza lub blokuje edycje terminarza.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Widget prezentujacy terminarz ligi. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a1a34c610e3def4a67488c11369e8c61a" name="a1a34c610e3def4a67488c11369e8c61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a34c610e3def4a67488c11369e8c61a">&#9670;&#160;</a></span>MatchScheduleWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatchScheduleWidget::MatchScheduleWidget </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tworzy widget terminarza. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="aeece64d0ec57ef21f38fd265529acb60" name="aeece64d0ec57ef21f38fd265529acb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeece64d0ec57ef21f38fd265529acb60">&#9670;&#160;</a></span>matchSlotEditRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatchScheduleWidget::matchSlotEditRequested </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>matchdayIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>matchIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>newSlot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prosba o zmiane slotu meczu (tylko nierozegrane). </p>
+
+</div>
+</div>
+<a id="a20baf28ba76cb77645544bf544eadd1b" name="a20baf28ba76cb77645544bf544eadd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20baf28ba76cb77645544bf544eadd1b">&#9670;&#160;</a></span>phaseAdvanceRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatchScheduleWidget::phaseAdvanceRequested </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sygnał do przejścia do następnego etapu przygotowania. </p>
+
+</div>
+</div>
+<a id="a12192aed81bc5b6e5284563140a38ee6" name="a12192aed81bc5b6e5284563140a38ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12192aed81bc5b6e5284563140a38ee6">&#9670;&#160;</a></span>refreshSchedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatchScheduleWidget::refreshSchedule </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_match.html">Match</a> &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>schedule</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentMatchday</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odswieza dane terminarza. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">schedule</td><td>Terminarz podzielony na kolejki. </td></tr>
+    <tr><td class="paramname">currentMatchday</td><td>Aktualna kolejka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa21f978bafe1bf4257d47aa23433dc48" name="aa21f978bafe1bf4257d47aa23433dc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21f978bafe1bf4257d47aa23433dc48">&#9670;&#160;</a></span>setEditingEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatchScheduleWidget::setEditingEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wlacza lub blokuje edycje terminarza. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true - edycja aktywna, false - edycja zablokowana. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>gui/<a class="el" href="_match_schedule_widget_8h_source.html">MatchScheduleWidget.h</a></li>
+<li>gui/<a class="el" href="_match_schedule_widget_8cpp.html">MatchScheduleWidget.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_match_schedule_widget.html">MatchScheduleWidget</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -7,6 +7,7 @@
 #include <memory>
 #include <vector>
 
+#include "Match.h"
 #include "Team.h"
 
 /**
@@ -17,6 +18,7 @@
 class QLabel;
 class QPushButton;
 class QTableWidget;
+class QListWidget;
 
 /**
  * @brief Widget prezentujacy tabele ligi.
@@ -39,7 +41,9 @@ public:
     void refreshTable(const std::vector<std::shared_ptr<Team>> &teams,
                       int currentMatchday,
                       int totalMatchdays,
-                      bool leagueFinished);
+                      bool leagueFinished,
+                      const std::vector<std::vector<std::shared_ptr<Match>>> &schedule,
+                      const std::shared_ptr<Team> &playerTeam);
 
 signals:
     /** @brief Zgloszenie prosby o symulacje kolejnej kolejki. */
@@ -53,11 +57,13 @@ private:
     QLabel *titleLabel;
     QLabel *statusLabel;
     QTableWidget *tableWidget;
+    QListWidget *playerTeamLogList;
     QPushButton *simulateNextButton;
     QPushButton *simulateAllButton;
 
     void setupUi();
+    void refreshPlayerTeamLog(const std::vector<std::vector<std::shared_ptr<Match>>> &schedule,
+                              const std::shared_ptr<Team> &playerTeam);
 };
 
-#endif // FIFA26_SIMULATOR_LEAGUETABLEWIDGET_H
-
+#endif

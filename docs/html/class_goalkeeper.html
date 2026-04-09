@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja klasy Goalkeeper</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_goalkeeper.html','','class_goalkeeper-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy Goalkeeper</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Reprezentuje bramkarza.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_goalkeeper_8h_source.html">Goalkeeper.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Goalkeeper</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_goalkeeper.png" usemap="#Goalkeeper_map" alt=""/>
+  <map id="Goalkeeper_map" name="Goalkeeper_map">
+<area href="class_player.html" title="Bazowa klasa reprezentujaca pilkarza." alt="Player" shape="rect" coords="0,0,77,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ae0e4fe9c893545d99104d7137fd2135b" id="r_ae0e4fe9c893545d99104d7137fd2135b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae0e4fe9c893545d99104d7137fd2135b">Goalkeeper</a> (std::string _name, std::string _surname, double _condition, int _overall, int _defendingSkills)</td></tr>
+<tr class="memdesc:ae0e4fe9c893545d99104d7137fd2135b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy bramkarza.  <br /></td></tr>
+<tr class="memitem:a245216637fc272a2b076e479d54843de" id="r_a245216637fc272a2b076e479d54843de"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a245216637fc272a2b076e479d54843de">calculateGoalChance</a> () const override</td></tr>
+<tr class="memdesc:a245216637fc272a2b076e479d54843de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oblicza szanse udanej akcji ofensywnej dla roli zawodnika.     <br /></td></tr>
+<tr class="memitem:a8e25d057d8ac6238102f6116af985fb0" id="r_a8e25d057d8ac6238102f6116af985fb0"><td class="memItemLeft"><a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8e25d057d8ac6238102f6116af985fb0">getNaturalPosition</a> () const override</td></tr>
+<tr class="memitem:a9babead692f262f62cc3517bcd214296" id="r_a9babead692f262f62cc3517bcd214296"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9babead692f262f62cc3517bcd214296">getDefendingSkills</a> () const</td></tr>
+<tr class="memitem:aae5e7440692b842e31678263aa9614af" id="r_aae5e7440692b842e31678263aa9614af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aae5e7440692b842e31678263aa9614af">setDefendingSkills</a> (int value)</td></tr>
+<tr class="memdesc:aae5e7440692b842e31678263aa9614af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia umiejetnosci defensywne.  <br /></td></tr>
+<tr class="memitem:a73e4ff2d70e62ca7e3be1d9b4ad9de85" id="r_a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a> () const</td></tr>
+<tr class="memitem:ad1d8cac8a0b566920721d8d22139e6c5" id="r_ad1d8cac8a0b566920721d8d22139e6c5"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ad1d8cac8a0b566920721d8d22139e6c5">getSurname</a> () const</td></tr>
+<tr class="memitem:a7f63ddd02f3d13d71eac5c62d1e3b67a" id="r_a7f63ddd02f3d13d71eac5c62d1e3b67a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a7f63ddd02f3d13d71eac5c62d1e3b67a">getCondition</a> () const</td></tr>
+<tr class="memitem:a6827cdc4ed09471ea86dfeea771e4f90" id="r_a6827cdc4ed09471ea86dfeea771e4f90"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a6827cdc4ed09471ea86dfeea771e4f90">getOverall</a> () const</td></tr>
+<tr class="memitem:a09ada1e2217053e7953bb0392b117b29" id="r_a09ada1e2217053e7953bb0392b117b29"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a09ada1e2217053e7953bb0392b117b29">getGoals</a> () const</td></tr>
+<tr class="memitem:af2d4cdf37d751c48a1a0d528215c7981" id="r_af2d4cdf37d751c48a1a0d528215c7981"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#af2d4cdf37d751c48a1a0d528215c7981">getAssists</a> () const</td></tr>
+<tr class="memitem:acd481f701fba3c8eda13dbc822bbbfcc" id="r_acd481f701fba3c8eda13dbc822bbbfcc"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#acd481f701fba3c8eda13dbc822bbbfcc">getYellowCards</a> () const</td></tr>
+<tr class="memitem:a9a37fce667059fca98d27ff948be9402" id="r_a9a37fce667059fca98d27ff948be9402"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a9a37fce667059fca98d27ff948be9402">getRedCards</a> () const</td></tr>
+<tr class="memitem:a655b5ac63954d7169f0611bb6aa104bb" id="r_a655b5ac63954d7169f0611bb6aa104bb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a655b5ac63954d7169f0611bb6aa104bb">getMinutesPlayed</a> () const</td></tr>
+<tr class="memitem:acebd3caf150b932b0713595d6d909527" id="r_acebd3caf150b932b0713595d6d909527"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#acebd3caf150b932b0713595d6d909527">getMorale</a> () const</td></tr>
+<tr class="memitem:ad024fc5cbab860fbcaaa44b4ba3b7799" id="r_ad024fc5cbab860fbcaaa44b4ba3b7799"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ad024fc5cbab860fbcaaa44b4ba3b7799">getInjuryDuration</a> () const</td></tr>
+<tr class="memitem:a67e9d1b8136abef81963e48413973fe0" id="r_a67e9d1b8136abef81963e48413973fe0"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a67e9d1b8136abef81963e48413973fe0">getSuspensionDuration</a> () const</td></tr>
+<tr class="memitem:af24fccfed489e06626b83c7d7f25c9de" id="r_af24fccfed489e06626b83c7d7f25c9de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#af24fccfed489e06626b83c7d7f25c9de">isAvailable</a> () const</td></tr>
+<tr class="memitem:a8e64e4c34f79880d0fc52b93ab3938c5" id="r_a8e64e4c34f79880d0fc52b93ab3938c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a8e64e4c34f79880d0fc52b93ab3938c5">setCondition</a> (double value)</td></tr>
+<tr class="memdesc:a8e64e4c34f79880d0fc52b93ab3938c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia kondycje.  <br /></td></tr>
+<tr class="memitem:ab3a40ce0966503fbaf8d22764ddb0da9" id="r_ab3a40ce0966503fbaf8d22764ddb0da9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ab3a40ce0966503fbaf8d22764ddb0da9">setOverall</a> (int value)</td></tr>
+<tr class="memdesc:ab3a40ce0966503fbaf8d22764ddb0da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia overall.  <br /></td></tr>
+<tr class="memitem:aeb7511c2ce59b3684ab504d81c720b78" id="r_aeb7511c2ce59b3684ab504d81c720b78"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#aeb7511c2ce59b3684ab504d81c720b78">addGoal</a> ()</td></tr>
+<tr class="memdesc:aeb7511c2ce59b3684ab504d81c720b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje gola.  <br /></td></tr>
+<tr class="memitem:ac36ad25d1838012f9b36e4a673ded711" id="r_ac36ad25d1838012f9b36e4a673ded711"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ac36ad25d1838012f9b36e4a673ded711">addAssist</a> ()</td></tr>
+<tr class="memdesc:ac36ad25d1838012f9b36e4a673ded711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje asyste.  <br /></td></tr>
+<tr class="memitem:a2abb51186e561e74d17196fcd00d22fc" id="r_a2abb51186e561e74d17196fcd00d22fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a2abb51186e561e74d17196fcd00d22fc">addYellowCard</a> ()</td></tr>
+<tr class="memdesc:a2abb51186e561e74d17196fcd00d22fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje zolta kartke.  <br /></td></tr>
+<tr class="memitem:ab931c4fd50e58c2019b51b15b7d17157" id="r_ab931c4fd50e58c2019b51b15b7d17157"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ab931c4fd50e58c2019b51b15b7d17157">addRedCard</a> ()</td></tr>
+<tr class="memdesc:ab931c4fd50e58c2019b51b15b7d17157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje czerwona kartke.  <br /></td></tr>
+<tr class="memitem:a20d9270be6374829dd4eb6145e93d2fa" id="r_a20d9270be6374829dd4eb6145e93d2fa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a20d9270be6374829dd4eb6145e93d2fa">addMinutesPlayed</a> (int minutes)</td></tr>
+<tr class="memdesc:a20d9270be6374829dd4eb6145e93d2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje rozegrane minuty.  <br /></td></tr>
+<tr class="memitem:ac2c70f9d9d726c034b357c1031f8e0b9" id="r_ac2c70f9d9d726c034b357c1031f8e0b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ac2c70f9d9d726c034b357c1031f8e0b9">setMorale</a> (double value)</td></tr>
+<tr class="memdesc:ac2c70f9d9d726c034b357c1031f8e0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia morale.  <br /></td></tr>
+<tr class="memitem:a0e98c0b9350eab5afe031922165de3b9" id="r_a0e98c0b9350eab5afe031922165de3b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a0e98c0b9350eab5afe031922165de3b9">adjustMorale</a> (double delta)</td></tr>
+<tr class="memdesc:a0e98c0b9350eab5afe031922165de3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia morale o delta (z klamrowaniem do zakresu).  <br /></td></tr>
+<tr class="memitem:ac5919eed59462c0b4612bead27619170" id="r_ac5919eed59462c0b4612bead27619170"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ac5919eed59462c0b4612bead27619170">setInjuryDuration</a> (int duration)</td></tr>
+<tr class="memdesc:ac5919eed59462c0b4612bead27619170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia liczbe kolejek pauzy z powodu kontuzji.  <br /></td></tr>
+<tr class="memitem:a7292f1438e121593d07df4e2bfb05677" id="r_a7292f1438e121593d07df4e2bfb05677"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a7292f1438e121593d07df4e2bfb05677">setSuspensionDuration</a> (int duration)</td></tr>
+<tr class="memdesc:a7292f1438e121593d07df4e2bfb05677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia liczbe kolejek pauzy z powodu zawieszenia.  <br /></td></tr>
+<tr class="memitem:a1e06c6f3d488b09d0f01535c23b47611" id="r_a1e06c6f3d488b09d0f01535c23b47611"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a1e06c6f3d488b09d0f01535c23b47611">decrementInjuryDuration</a> ()</td></tr>
+<tr class="memdesc:a1e06c6f3d488b09d0f01535c23b47611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrementuje liczbe kolejek pauzy z powodu kontuzji.  <br /></td></tr>
+<tr class="memitem:a1e4b5e23f60ab5fc7fbcfaeb2f887f9e" id="r_a1e4b5e23f60ab5fc7fbcfaeb2f887f9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a1e4b5e23f60ab5fc7fbcfaeb2f887f9e">decrementSuspensionDuration</a> ()</td></tr>
+<tr class="memdesc:a1e4b5e23f60ab5fc7fbcfaeb2f887f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrementuje liczbe kolejek pauzy z powodu zawieszenia.  <br /></td></tr>
+<tr class="memitem:aeddbdc1927e1edb3e15b5947880aaa97" id="r_aeddbdc1927e1edb3e15b5947880aaa97"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#aeddbdc1927e1edb3e15b5947880aaa97">getConditionStat</a> ()</td></tr>
+<tr class="memitem:a8de8bb79fc1ff5ebcf095ab53ab9109c" id="r_a8de8bb79fc1ff5ebcf095ab53ab9109c"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a8de8bb79fc1ff5ebcf095ab53ab9109c">getOverallStat</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:af9c920fabaafdeb7961a645315b521ff" id="r_af9c920fabaafdeb7961a645315b521ff"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#af9c920fabaafdeb7961a645315b521ff">name</a></td></tr>
+<tr class="memitem:a9bfc62b1ed9b916310fd025613b80d6e" id="r_a9bfc62b1ed9b916310fd025613b80d6e"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a9bfc62b1ed9b916310fd025613b80d6e">surname</a></td></tr>
+<tr class="memitem:ac836a2f6bc885873d3d05d8ae2828559" id="r_ac836a2f6bc885873d3d05d8ae2828559"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ac836a2f6bc885873d3d05d8ae2828559">condition</a></td></tr>
+<tr class="memitem:a4fc685de363812add5096db1c74e028f" id="r_a4fc685de363812add5096db1c74e028f"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a4fc685de363812add5096db1c74e028f">overall</a></td></tr>
+<tr class="memitem:abeedfe127b74df7b2edd30d1599ba648" id="r_abeedfe127b74df7b2edd30d1599ba648"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#abeedfe127b74df7b2edd30d1599ba648">goals</a></td></tr>
+<tr class="memitem:a6e00a564af6d29e430e5a70c2287d5f9" id="r_a6e00a564af6d29e430e5a70c2287d5f9"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a6e00a564af6d29e430e5a70c2287d5f9">assists</a></td></tr>
+<tr class="memitem:a6f2e448351b66a2af992ab58a15ab3ef" id="r_a6f2e448351b66a2af992ab58a15ab3ef"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a6f2e448351b66a2af992ab58a15ab3ef">yellowCards</a></td></tr>
+<tr class="memitem:a3b6effcc81497a6c02582f8e23ba4d37" id="r_a3b6effcc81497a6c02582f8e23ba4d37"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a3b6effcc81497a6c02582f8e23ba4d37">redCards</a></td></tr>
+<tr class="memitem:ae668c62421f9f37771ebbb9765e6684e" id="r_ae668c62421f9f37771ebbb9765e6684e"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#ae668c62421f9f37771ebbb9765e6684e">minutesPlayed</a></td></tr>
+<tr class="memitem:a3c7d96a4efc8958d5eac839d2d757dad" id="r_a3c7d96a4efc8958d5eac839d2d757dad"><td class="memItemLeft"><a class="el" href="class_statistic.html">Statistic</a>&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a3c7d96a4efc8958d5eac839d2d757dad">morale</a></td></tr>
+<tr class="memitem:a8a59943e0b2d582c41c1c14854ebb2f0" id="r_a8a59943e0b2d582c41c1c14854ebb2f0"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a8a59943e0b2d582c41c1c14854ebb2f0">injuryDuration</a></td></tr>
+<tr class="memitem:a411defbe24fe876c62633186894a9f41" id="r_a411defbe24fe876c62633186894a9f41"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_player.html#a411defbe24fe876c62633186894a9f41">suspensionDuration</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Reprezentuje bramkarza. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="ae0e4fe9c893545d99104d7137fd2135b" name="ae0e4fe9c893545d99104d7137fd2135b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e4fe9c893545d99104d7137fd2135b">&#9670;&#160;</a></span>Goalkeeper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Goalkeeper::Goalkeeper </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>_surname</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>_condition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_overall</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_defendingSkills</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy bramkarza. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ac36ad25d1838012f9b36e4a673ded711" name="ac36ad25d1838012f9b36e4a673ded711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36ad25d1838012f9b36e4a673ded711">&#9670;&#160;</a></span>addAssist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addAssist </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje asyste. </p>
+
+</div>
+</div>
+<a id="aeb7511c2ce59b3684ab504d81c720b78" name="aeb7511c2ce59b3684ab504d81c720b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7511c2ce59b3684ab504d81c720b78">&#9670;&#160;</a></span>addGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addGoal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje gola. </p>
+
+</div>
+</div>
+<a id="a20d9270be6374829dd4eb6145e93d2fa" name="a20d9270be6374829dd4eb6145e93d2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d9270be6374829dd4eb6145e93d2fa">&#9670;&#160;</a></span>addMinutesPlayed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addMinutesPlayed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minutes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje rozegrane minuty. </p>
+
+</div>
+</div>
+<a id="ab931c4fd50e58c2019b51b15b7d17157" name="ab931c4fd50e58c2019b51b15b7d17157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab931c4fd50e58c2019b51b15b7d17157">&#9670;&#160;</a></span>addRedCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addRedCard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje czerwona kartke. </p>
+
+</div>
+</div>
+<a id="a2abb51186e561e74d17196fcd00d22fc" name="a2abb51186e561e74d17196fcd00d22fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2abb51186e561e74d17196fcd00d22fc">&#9670;&#160;</a></span>addYellowCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::addYellowCard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje zolta kartke. </p>
+
+</div>
+</div>
+<a id="a0e98c0b9350eab5afe031922165de3b9" name="a0e98c0b9350eab5afe031922165de3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e98c0b9350eab5afe031922165de3b9">&#9670;&#160;</a></span>adjustMorale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::adjustMorale </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>delta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienia morale o delta (z klamrowaniem do zakresu). </p>
+
+</div>
+</div>
+<a id="a245216637fc272a2b076e479d54843de" name="a245216637fc272a2b076e479d54843de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245216637fc272a2b076e479d54843de">&#9670;&#160;</a></span>calculateGoalChance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Goalkeeper::calculateGoalChance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oblicza szanse udanej akcji ofensywnej dla roli zawodnika.    </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Wskaznik szansy wyliczony dla danej pozycji.    </dd></dl>
+
+<p>Implementuje <a class="el" href="class_player.html#a61e0f5cb3f93bc4a8e92743724a0ed4a">Player</a>.</p>
+
+</div>
+</div>
+<a id="a1e06c6f3d488b09d0f01535c23b47611" name="a1e06c6f3d488b09d0f01535c23b47611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e06c6f3d488b09d0f01535c23b47611">&#9670;&#160;</a></span>decrementInjuryDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::decrementInjuryDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrementuje liczbe kolejek pauzy z powodu kontuzji. </p>
+
+</div>
+</div>
+<a id="a1e4b5e23f60ab5fc7fbcfaeb2f887f9e" name="a1e4b5e23f60ab5fc7fbcfaeb2f887f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4b5e23f60ab5fc7fbcfaeb2f887f9e">&#9670;&#160;</a></span>decrementSuspensionDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::decrementSuspensionDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrementuje liczbe kolejek pauzy z powodu zawieszenia. </p>
+
+</div>
+</div>
+<a id="af2d4cdf37d751c48a1a0d528215c7981" name="af2d4cdf37d751c48a1a0d528215c7981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d4cdf37d751c48a1a0d528215c7981">&#9670;&#160;</a></span>getAssists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getAssists </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba asyst. </dd></dl>
+
+</div>
+</div>
+<a id="a7f63ddd02f3d13d71eac5c62d1e3b67a" name="a7f63ddd02f3d13d71eac5c62d1e3b67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f63ddd02f3d13d71eac5c62d1e3b67a">&#9670;&#160;</a></span>getCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::getCondition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualna kondycja. </dd></dl>
+
+</div>
+</div>
+<a id="aeddbdc1927e1edb3e15b5947880aaa97" name="aeddbdc1927e1edb3e15b5947880aaa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddbdc1927e1edb3e15b5947880aaa97">&#9670;&#160;</a></span>getConditionStat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt; double &gt; &amp; Player::getConditionStat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Referencja do obiektu statystyki kondycji. </dd></dl>
+
+</div>
+</div>
+<a id="a9babead692f262f62cc3517bcd214296" name="a9babead692f262f62cc3517bcd214296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9babead692f262f62cc3517bcd214296">&#9670;&#160;</a></span>getDefendingSkills()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Goalkeeper::getDefendingSkills </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Wartosc umiejetnosci defensywnych. </dd></dl>
+
+</div>
+</div>
+<a id="a09ada1e2217053e7953bb0392b117b29" name="a09ada1e2217053e7953bb0392b117b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ada1e2217053e7953bb0392b117b29">&#9670;&#160;</a></span>getGoals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getGoals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba goli. </dd></dl>
+
+</div>
+</div>
+<a id="ad024fc5cbab860fbcaaa44b4ba3b7799" name="ad024fc5cbab860fbcaaa44b4ba3b7799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad024fc5cbab860fbcaaa44b4ba3b7799">&#9670;&#160;</a></span>getInjuryDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getInjuryDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba kolejek pauzy z powodu kontuzji. </dd></dl>
+
+</div>
+</div>
+<a id="a655b5ac63954d7169f0611bb6aa104bb" name="a655b5ac63954d7169f0611bb6aa104bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655b5ac63954d7169f0611bb6aa104bb">&#9670;&#160;</a></span>getMinutesPlayed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getMinutesPlayed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba rozegranych minut. </dd></dl>
+
+</div>
+</div>
+<a id="acebd3caf150b932b0713595d6d909527" name="acebd3caf150b932b0713595d6d909527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebd3caf150b932b0713595d6d909527">&#9670;&#160;</a></span>getMorale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::getMorale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualne morale. </dd></dl>
+
+</div>
+</div>
+<a id="a73e4ff2d70e62ca7e3be1d9b4ad9de85" name="a73e4ff2d70e62ca7e3be1d9b4ad9de85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e4ff2d70e62ca7e3be1d9b4ad9de85">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Imie pilkarza. </dd></dl>
+
+</div>
+</div>
+<a id="a8e25d057d8ac6238102f6116af985fb0" name="a8e25d057d8ac6238102f6116af985fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e25d057d8ac6238102f6116af985fb0">&#9670;&#160;</a></span>getNaturalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_player_8h.html#abfcd7e80dfd0111127f9a0014abb6b75">PlayerPosition</a> Goalkeeper::getNaturalPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="section return"><dt>Zwraca</dt><dd>Naturalna pozycja zawodnika.    </dd></dl>
+
+<p>Implementuje <a class="el" href="class_player.html#a4dff3481b7c85a0e3801ba8f652be3ed">Player</a>.</p>
+
+</div>
+</div>
+<a id="a6827cdc4ed09471ea86dfeea771e4f90" name="a6827cdc4ed09471ea86dfeea771e4f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6827cdc4ed09471ea86dfeea771e4f90">&#9670;&#160;</a></span>getOverall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getOverall </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualny overall. </dd></dl>
+
+</div>
+</div>
+<a id="a8de8bb79fc1ff5ebcf095ab53ab9109c" name="a8de8bb79fc1ff5ebcf095ab53ab9109c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de8bb79fc1ff5ebcf095ab53ab9109c">&#9670;&#160;</a></span>getOverallStat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt; int &gt; &amp; Player::getOverallStat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Referencja do obiektu statystyki overall. </dd></dl>
+
+</div>
+</div>
+<a id="a9a37fce667059fca98d27ff948be9402" name="a9a37fce667059fca98d27ff948be9402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a37fce667059fca98d27ff948be9402">&#9670;&#160;</a></span>getRedCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getRedCards </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba czerwonych kartek. </dd></dl>
+
+</div>
+</div>
+<a id="ad1d8cac8a0b566920721d8d22139e6c5" name="ad1d8cac8a0b566920721d8d22139e6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d8cac8a0b566920721d8d22139e6c5">&#9670;&#160;</a></span>getSurname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::getSurname </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Nazwisko pilkarza. </dd></dl>
+
+</div>
+</div>
+<a id="a67e9d1b8136abef81963e48413973fe0" name="a67e9d1b8136abef81963e48413973fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e9d1b8136abef81963e48413973fe0">&#9670;&#160;</a></span>getSuspensionDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getSuspensionDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba kolejek pauzy z powodu zawieszenia. </dd></dl>
+
+</div>
+</div>
+<a id="acd481f701fba3c8eda13dbc822bbbfcc" name="acd481f701fba3c8eda13dbc822bbbfcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd481f701fba3c8eda13dbc822bbbfcc">&#9670;&#160;</a></span>getYellowCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getYellowCards </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Liczba zoltych kartek. </dd></dl>
+
+</div>
+</div>
+<a id="af24fccfed489e06626b83c7d7f25c9de" name="af24fccfed489e06626b83c7d7f25c9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24fccfed489e06626b83c7d7f25c9de">&#9670;&#160;</a></span>isAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::isAvailable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>true, jezeli zawodnik moze zagrac w najblizszym meczu. </dd></dl>
+
+</div>
+</div>
+<a id="a8e64e4c34f79880d0fc52b93ab3938c5" name="a8e64e4c34f79880d0fc52b93ab3938c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e64e4c34f79880d0fc52b93ab3938c5">&#9670;&#160;</a></span>setCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setCondition </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia kondycje. </p>
+
+</div>
+</div>
+<a id="aae5e7440692b842e31678263aa9614af" name="aae5e7440692b842e31678263aa9614af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5e7440692b842e31678263aa9614af">&#9670;&#160;</a></span>setDefendingSkills()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Goalkeeper::setDefendingSkills </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia umiejetnosci defensywne. </p>
+
+</div>
+</div>
+<a id="ac5919eed59462c0b4612bead27619170" name="ac5919eed59462c0b4612bead27619170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5919eed59462c0b4612bead27619170">&#9670;&#160;</a></span>setInjuryDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setInjuryDuration </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia liczbe kolejek pauzy z powodu kontuzji. </p>
+
+</div>
+</div>
+<a id="ac2c70f9d9d726c034b357c1031f8e0b9" name="ac2c70f9d9d726c034b357c1031f8e0b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c70f9d9d726c034b357c1031f8e0b9">&#9670;&#160;</a></span>setMorale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setMorale </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia morale. </p>
+
+</div>
+</div>
+<a id="ab3a40ce0966503fbaf8d22764ddb0da9" name="ab3a40ce0966503fbaf8d22764ddb0da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a40ce0966503fbaf8d22764ddb0da9">&#9670;&#160;</a></span>setOverall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setOverall </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia overall. </p>
+
+</div>
+</div>
+<a id="a7292f1438e121593d07df4e2bfb05677" name="a7292f1438e121593d07df4e2bfb05677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7292f1438e121593d07df4e2bfb05677">&#9670;&#160;</a></span>setSuspensionDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setSuspensionDuration </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia liczbe kolejek pauzy z powodu zawieszenia. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a6e00a564af6d29e430e5a70c2287d5f9" name="a6e00a564af6d29e430e5a70c2287d5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e00a564af6d29e430e5a70c2287d5f9">&#9670;&#160;</a></span>assists</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::assists</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac836a2f6bc885873d3d05d8ae2828559" name="ac836a2f6bc885873d3d05d8ae2828559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac836a2f6bc885873d3d05d8ae2828559">&#9670;&#160;</a></span>condition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;double&gt; Player::condition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abeedfe127b74df7b2edd30d1599ba648" name="abeedfe127b74df7b2edd30d1599ba648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeedfe127b74df7b2edd30d1599ba648">&#9670;&#160;</a></span>goals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::goals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a59943e0b2d582c41c1c14854ebb2f0" name="a8a59943e0b2d582c41c1c14854ebb2f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a59943e0b2d582c41c1c14854ebb2f0">&#9670;&#160;</a></span>injuryDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::injuryDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae668c62421f9f37771ebbb9765e6684e" name="ae668c62421f9f37771ebbb9765e6684e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae668c62421f9f37771ebbb9765e6684e">&#9670;&#160;</a></span>minutesPlayed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::minutesPlayed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c7d96a4efc8958d5eac839d2d757dad" name="a3c7d96a4efc8958d5eac839d2d757dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7d96a4efc8958d5eac839d2d757dad">&#9670;&#160;</a></span>morale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;double&gt; Player::morale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9c920fabaafdeb7961a645315b521ff" name="af9c920fabaafdeb7961a645315b521ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c920fabaafdeb7961a645315b521ff">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fc685de363812add5096db1c74e028f" name="a4fc685de363812add5096db1c74e028f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc685de363812add5096db1c74e028f">&#9670;&#160;</a></span>overall</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::overall</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b6effcc81497a6c02582f8e23ba4d37" name="a3b6effcc81497a6c02582f8e23ba4d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6effcc81497a6c02582f8e23ba4d37">&#9670;&#160;</a></span>redCards</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::redCards</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bfc62b1ed9b916310fd025613b80d6e" name="a9bfc62b1ed9b916310fd025613b80d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfc62b1ed9b916310fd025613b80d6e">&#9670;&#160;</a></span>surname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::surname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a411defbe24fe876c62633186894a9f41" name="a411defbe24fe876c62633186894a9f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411defbe24fe876c62633186894a9f41">&#9670;&#160;</a></span>suspensionDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::suspensionDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2e448351b66a2af992ab58a15ab3ef" name="a6f2e448351b66a2af992ab58a15ab3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2e448351b66a2af992ab58a15ab3ef">&#9670;&#160;</a></span>yellowCards</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt;int&gt; Player::yellowCards</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>core/headers/<a class="el" href="_goalkeeper_8h_source.html">Goalkeeper.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_goalkeeper.html">Goalkeeper</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

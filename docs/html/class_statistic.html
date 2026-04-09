@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fifa26_Simulator: Dokumentacja szablonu klasy Statistic&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fifa26_Simulator
+   </div>
+   <div id="projectbrief">Symulator ligi pilkarskiej (core + GUI Qt)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_statistic.html','','class_statistic-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja szablonu klasy Statistic&lt; T &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pojedyncza statystyka liczbowa pilkarza, druzyny lub meczu.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_statistic_8h_source.html">Statistic.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:accaae3802e233ea03634b37720e5c93e" id="r_accaae3802e233ea03634b37720e5c93e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#accaae3802e233ea03634b37720e5c93e">Statistic</a> (std::string statName, T initValue, T minVal, T maxVal)</td></tr>
+<tr class="memdesc:accaae3802e233ea03634b37720e5c93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy statystyke.  <br /></td></tr>
+<tr class="memitem:a6f0e376fcc66d49767379cd01c5238be" id="r_a6f0e376fcc66d49767379cd01c5238be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f0e376fcc66d49767379cd01c5238be">add</a> (T amount)</td></tr>
+<tr class="memdesc:a6f0e376fcc66d49767379cd01c5238be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje wartosc i klamruje wynik do zakresu min/max.  <br /></td></tr>
+<tr class="memitem:afc320223321c255ef355d90a1ae2b465" id="r_afc320223321c255ef355d90a1ae2b465"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc320223321c255ef355d90a1ae2b465">subtract</a> (T amount)</td></tr>
+<tr class="memdesc:afc320223321c255ef355d90a1ae2b465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odejmuje wartosc i klamruje wynik do zakresu min/max.  <br /></td></tr>
+<tr class="memitem:a88dd63f1c6971e140291ce164cfe4a38" id="r_a88dd63f1c6971e140291ce164cfe4a38"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a88dd63f1c6971e140291ce164cfe4a38">setValue</a> (T newValue)</td></tr>
+<tr class="memdesc:a88dd63f1c6971e140291ce164cfe4a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia nowa wartosc w granicach min/max.  <br /></td></tr>
+<tr class="memitem:ac96477dec6b50c94bc58cd65deec272d" id="r_ac96477dec6b50c94bc58cd65deec272d"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ac96477dec6b50c94bc58cd65deec272d">getValue</a> () const</td></tr>
+<tr class="memitem:a55689b5eca25d95720760b55849696e5" id="r_a55689b5eca25d95720760b55849696e5"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a55689b5eca25d95720760b55849696e5">getName</a> () const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class Statistic&lt; T &gt;</div><p>Pojedyncza statystyka liczbowa pilkarza, druzyny lub meczu. </p>
+<dl class="tparams"><dt>Parametry Szablonu</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Typ liczbowy przechowywanej wartosci. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="accaae3802e233ea03634b37720e5c93e" name="accaae3802e233ea03634b37720e5c93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accaae3802e233ea03634b37720e5c93e">&#9670;&#160;</a></span>Statistic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::Statistic </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>statName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>initValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>minVal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>maxVal</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tworzy statystyke. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statName</td><td>Nazwa statystyki. </td></tr>
+    <tr><td class="paramname">initValue</td><td>Wartosc poczatkowa. </td></tr>
+    <tr><td class="paramname">minVal</td><td>Dolna granica. </td></tr>
+    <tr><td class="paramname">maxVal</td><td>Gorna granica. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a6f0e376fcc66d49767379cd01c5238be" name="a6f0e376fcc66d49767379cd01c5238be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0e376fcc66d49767379cd01c5238be">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dodaje wartosc i klamruje wynik do zakresu min/max. </p>
+
+</div>
+</div>
+<a id="a55689b5eca25d95720760b55849696e5" name="a55689b5eca25d95720760b55849696e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55689b5eca25d95720760b55849696e5">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; <a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Nazwa statystyki. </dd></dl>
+
+</div>
+</div>
+<a id="ac96477dec6b50c94bc58cd65deec272d" name="ac96477dec6b50c94bc58cd65deec272d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96477dec6b50c94bc58cd65deec272d">&#9670;&#160;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::getValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>Aktualna wartosc statystyki. </dd></dl>
+
+</div>
+</div>
+<a id="a88dd63f1c6971e140291ce164cfe4a38" name="a88dd63f1c6971e140291ce164cfe4a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88dd63f1c6971e140291ce164cfe4a38">&#9670;&#160;</a></span>setValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::setValue </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>newValue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia nowa wartosc w granicach min/max. </p>
+
+</div>
+</div>
+<a id="afc320223321c255ef355d90a1ae2b465" name="afc320223321c255ef355d90a1ae2b465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc320223321c255ef355d90a1ae2b465">&#9670;&#160;</a></span>subtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_statistic.html">Statistic</a>&lt; T &gt;::subtract </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Odejmuje wartosc i klamruje wynik do zakresu min/max. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>core/headers/<a class="el" href="_statistic_8h_source.html">Statistic.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_statistic.html">Statistic</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

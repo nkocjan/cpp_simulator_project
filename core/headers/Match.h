@@ -2,6 +2,7 @@
 #include "Team.h"
 #include "Statistic.h"
 #include <memory>
+#include <set>
 #include <string>
 #include <vector>
 
@@ -20,35 +21,56 @@ private:
     Statistic<int> homeGoals;
     Statistic<int> awayGoals;
     bool isFinished;
+    int randomnessPercent;
+    std::string weekendSlot;
 
     std::vector<std::string> matchEvents;
+    std::vector<std::shared_ptr<Player>> homeMatchPlayers;
+    std::vector<std::shared_ptr<Player>> awayMatchPlayers;
+    std::set<const Player*> homeScorers;
+    std::set<const Player*> awayScorers;
 
     void simulateCards();
     void simulateInjuries();
-    void assignGoalsToPlayers(const std::shared_ptr<Team>& team, int goalCount);
-    void assignCardsToPlayers(const std::shared_ptr<Team>& team, int cardCount, bool yellowCard);
+    void assignGoalsToPlayers(const std::vector<std::shared_ptr<Player>>& lineup, int goalCount, std::set<const Player*>& scorers);
+    void assignCardsToPlayers(const std::vector<std::shared_ptr<Player>>& lineup, int cardCount, bool yellowCard);
+    void applyTeamMorale(const std::shared_ptr<Team>& team,
+                         const std::vector<std::shared_ptr<Player>>& playedPlayers,
+                         const std::set<const Player*>& scorers,
+                         bool won,
+                         bool lost);
+    void applyPostMatchMorale(int homeGoalCount, int awayGoalCount);
 
 public:
     /**
      * @brief Tworzy mecz.
      * @param home Druzyna gospodarzy.
      * @param away Druzyna gosci.
+     * @param randomness Udzial losowosci w skali 0-100.
      */
-    Match(std::shared_ptr<Team> home, std::shared_ptr<Team> away);
+    Match(std::shared_ptr<Team> home, std::shared_ptr<Team> away, int randomness = 50);
 
     /** @brief Symuluje przebieg i wynik meczu. */
     void simulate();
 
-    /** @return Wskaznik na druzyne gospodarzy. */
+    /** @return Zaplanowany slot weekendowy meczu. */
+    [[nodiscard]] const std::string& getWeekendSlot() const;
+    /**
+     * @brief Ustawia slot weekendowy meczu.
+     * @return true, jesli slot zostal zmieniony.
+     */
+    bool setWeekendSlot(const std::string& slot);
+
+    /** @return Druzyna gospodarzy. */
     [[nodiscard]] std::shared_ptr<Team> getHomeTeam() const;
-    /** @return Wskaznik na druzyne gosci. */
+    /** @return Druzyna gosci. */
     [[nodiscard]] std::shared_ptr<Team> getAwayTeam() const;
-    /** @return Liczba bramek gospodarzy. */
+    /** @return Liczba goli gospodarzy. */
     [[nodiscard]] int getHomeGoals() const;
-    /** @return Liczba bramek gosci. */
+    /** @return Liczba goli gosci. */
     [[nodiscard]] int getAwayGoals() const;
-    /** @return true, gdy mecz zostal rozegrany. */
+    /** @return true, gdy mecz jest zakonczony. */
     [[nodiscard]] bool getIsFinished() const;
-    /** @return Lista zdarzen meczowych w kolejnosci czasowej. */
+    /** @return Lista zdarzen opisujacych przebieg meczu. */
     [[nodiscard]] const std::vector<std::string>& getMatchEvents() const;
 };
